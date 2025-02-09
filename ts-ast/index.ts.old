@@ -1,0 +1,205 @@
+import ts from 'typescript';
+
+interface TypeAnalysis {
+  kind: string;
+  text: string;
+  constituents?: TypeAnalysis[];
+  parameters?: ParameterAnalysis[];
+  returnType?: TypeAnalysis;
+}
+
+interface ParameterAnalysis {
+  name: string;
+  optional: boolean;
+  type: TypeAnalysis;
+}
+
+function analyzeTypeNode(typeNode: ts.TypeNode): TypeAnalysis {
+  switch (typeNode.kind) {
+    case ts.SyntaxKind.FunctionType:
+      const functionType = typeNode as ts.FunctionTypeNode;
+      return {
+        kind: 'Function',
+        text: typeNode.getText(),
+        parameters: functionType.parameters.map(param => ({
+          name: param.name.getText(),
+          optional: !!param.questionToken,
+          type: param.type ? analyzeTypeNode(param.type) : { kind: 'Any', text: 'any' }
+        })),
+        returnType: functionType.type ? analyzeTypeNode(functionType.type) : undefined
+      };
+
+    case ts.SyntaxKind.UnionType:
+      const unionType = typeNode as ts.UnionTypeNode;
+      return {
+        kind: 'Union',
+        text: typeNode.getText(),
+        constituents: unionType.types.map(analyzeTypeNode)
+      };
+
+    case ts.SyntaxKind.IntersectionType:
+      const intersectionType = typeNode as ts.IntersectionTypeNode;
+      return {
+        kind: 'Intersection',
+        text: typeNode.getText(),
+        constituents: intersectionType.types.map(analyzeTypeNode)
+      };
+
+    case ts.SyntaxKind.ArrayType:
+      const arrayType = typeNode as ts.ArrayTypeNode;
+      return {
+        kind: 'Array',
+        text: typeNode.getText(),
+        constituents: [analyzeTypeNode(arrayType.elementType)]
+      };
+
+    case ts.SyntaxKind.TupleType:
+      const tupleType = typeNode as ts.TupleTypeNode;
+      return {
+        kind: 'Tuple',
+        text: typeNode.getText(),
+        constituents: tupleType.elements.map(element => {
+          if (ts.isNamedTupleMember(element)) {
+            // Handle named tuple members like [x: string, y: number]
+            const analysis = analyzeTypeNode(element.type);
+            return {
+              ...analysis,
+              name: element.name.getText(),
+              isOptional: !!element.questionToken
+            };
+          } else if (ts.isRestTypeNode(element)) {
+            // Handle rest elements like [string, ...number[]]
+            return {
+              ...analyzeTypeNode(element.type),
+              isRest: true
+            };
+          } else {
+            // Handle regular tuple elements
+            const optionalTypeNode = ts.isOptionalTypeNode(element) ?
+              (element as ts.OptionalTypeNode).type : element;
+            return {
+              ...analyzeTypeNode(optionalTypeNode),
+              isOptional: ts.isOptionalTypeNode(element)
+            };
+          }
+        })
+      };
+
+    case ts.SyntaxKind.TypeLiteral:
+      const typeLiteral = typeNode as ts.TypeLiteralNode;
+      return {
+        kind: 'Object',
+        text: typeNode.getText(),
+        constituents: typeLiteral.members.map(member => {
+          if (ts.isPropertySignature(member) && member.type) {
+            return analyzeTypeNode(member.type);
+          } else if (ts.isMethodSignature(member)) {
+            return {
+              kind: 'Method',
+              text: member.getText(),
+              parameters: member.parameters.map(param => ({
+                name: param.name.getText(),
+                optional: !!param.questionToken,
+                type: param.type ? analyzeTypeNode(param.type) : { kind: 'Any', text: 'any' }
+              })),
+              returnType: member.type ? analyzeTypeNode(member.type) : undefined
+            };
+          }
+          return {
+            kind: 'Unknown',
+            text: member.getText()
+          };
+        })
+      };
+
+    case ts.SyntaxKind.TypeReference:
+      const typeRef = typeNode as ts.TypeReferenceNode;
+      return {
+        kind: 'TypeReference',
+        text: typeNode.getText(),
+        constituents: typeRef.typeArguments ?
+          typeRef.typeArguments.map(analyzeTypeNode) : undefined
+      };
+
+    default:
+      return {
+        kind: ts.SyntaxKind[typeNode.kind],
+        text: typeNode.getText()
+      };
+  }
+}
+
+function parseTypeString(typeString: string): TypeAnalysis {
+  const sourceFile = ts.createSourceFile(
+    'temp.ts',
+    `type T = ${typeString};`,
+    ts.ScriptTarget.Latest,
+    true
+  );
+
+  let typeNode: ts.TypeNode | undefined;
+
+  ts.forEachChild(sourceFile, node => {
+    if (ts.isTypeAliasDeclaration(node)) {
+      typeNode = node.type;
+    }
+  });
+
+  if (!typeNode) {
+    throw new Error('Failed to parse type string');
+  }
+
+  return analyzeTypeNode(typeNode)
+  // return `${analyzeTypeNode(typeNode).text}, ${analyzeTypeNode(typeNode).kind}`
+}
+
+function stringOfTypeAnalysis(typeAnalysisResult: TypeAnalysis, indent: number): string {
+  let str = (" ".repeat(indent)) + `${typeAnalysisResult.text}: ${typeAnalysisResult.kind}\n`;
+
+  if (typeAnalysisResult.parameters) {
+    for (const param of typeAnalysisResult.parameters) {
+      str += stringOfTypeAnalysis(param.type, indent + 2);
+    }
+  }
+
+  if (typeAnalysisResult.returnType) {
+    str += stringOfTypeAnalysis(typeAnalysisResult.returnType, indent + 2);
+  }
+
+  if (typeAnalysisResult.constituents) {
+    for (const constituent of typeAnalysisResult.constituents) {
+      str += stringOfTypeAnalysis(constituent, indent + 2);
+    }
+  }
+
+  return str;
+}
+
+// Example usage
+function demonstrateParser() {
+  const examples = [
+    'string',
+    'string | number',
+    'Array<string>',
+    '{ name: string; age: number }',
+    'Promise<string>',
+    'string & { length: number }',
+    '(x: number, y?: string) => boolean',
+    '{ method(a: number): string; prop: (b: boolean) => number }',
+    'Array<(x: string) => number>',
+    '(m: Model, a: Action) => Model',
+    '[string, Todo[]]',
+  ];
+
+  examples.forEach(example => {
+    console.log(`\nAnalyzing: ${example} `);
+    console.log(JSON.stringify(parseTypeString(example), null, 2));
+  });
+
+  examples.forEach(example => {
+    console.log(`\nAnalyzing: ${example} `);
+    console.log(stringOfTypeAnalysis(parseTypeString(example), 0));
+  });
+}
+
+demonstrateParser();
