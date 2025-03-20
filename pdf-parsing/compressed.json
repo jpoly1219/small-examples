@@ -1,0 +1,4212 @@
+{
+  "acroform": {
+    "fields": [],
+    "hasacroform": false,
+    "needappearances": false
+  },
+  "attachments": {},
+  "encrypt": {
+    "capabilities": {
+      "accessibility": true,
+      "extract": true,
+      "moddifyannotations": true,
+      "modify": true,
+      "modifyassembly": true,
+      "modifyforms": true,
+      "modifyother": true,
+      "printhigh": true,
+      "printlow": true
+    },
+    "encrypted": false,
+    "ownerpasswordmatched": false,
+    "parameters": {
+      "P": 0,
+      "R": 0,
+      "V": 0,
+      "bits": 0,
+      "filemethod": "none",
+      "key": null,
+      "method": "none",
+      "streammethod": "none",
+      "stringmethod": "none"
+    },
+    "userpasswordmatched": false
+  },
+  "objectinfo": {
+    "1 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "10 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "100 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "101 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "102 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "103 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "104 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "105 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "106 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "107 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "108 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "109 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "11 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 112
+      }
+    },
+    "110 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "111 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "112 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "113 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "114 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "115 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "116 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "117 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "118 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "119 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "12 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "120 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "121 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "122 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "123 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "124 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "125 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "126 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "127 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "128 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "129 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "13 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 127
+      }
+    },
+    "130 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "131 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "132 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "133 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "134 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "135 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "136 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "137 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "138 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "139 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "14 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "140 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "141 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "142 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "143 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "144 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "145 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "146 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "147 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "148 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "149 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "15 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 843
+      }
+    },
+    "150 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "151 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "152 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "153 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "154 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "155 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "156 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "157 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "158 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "159 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "16 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 5019
+      }
+    },
+    "160 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "161 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "162 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "163 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "164 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "17 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 15431
+      }
+    },
+    "18 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 13228
+      }
+    },
+    "19 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 689
+      }
+    },
+    "2 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 4961
+      }
+    },
+    "20 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 45471
+      }
+    },
+    "21 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 90729
+      }
+    },
+    "22 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 87773
+      }
+    },
+    "23 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 59030
+      }
+    },
+    "24 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 9036
+      }
+    },
+    "25 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 881
+      }
+    },
+    "26 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 877
+      }
+    },
+    "27 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 874
+      }
+    },
+    "28 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 876
+      }
+    },
+    "29 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 1012
+      }
+    },
+    "3 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "30 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 2074
+      }
+    },
+    "31 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 3354
+      }
+    },
+    "32 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "33 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "34 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "35 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "36 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "37 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "38 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "39 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "4 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 2325
+      }
+    },
+    "40 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "41 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "42 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "43 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "44 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "45 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "46 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "47 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "48 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "49 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "5 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "50 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "51 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "52 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "53 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "54 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "55 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "56 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "57 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "58 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "59 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "6 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 149
+      }
+    },
+    "60 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "61 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "62 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "63 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "64 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "65 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "66 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "67 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "68 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "69 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "7 0 R": {
+      "stream": {
+        "filter": null,
+        "is": true,
+        "length": 19715
+      }
+    },
+    "70 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "71 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "72 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "73 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "74 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "75 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "76 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "77 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "78 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "79 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "8 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "80 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "81 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "82 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "83 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "84 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "85 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "86 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "87 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "88 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "89 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "9 0 R": {
+      "stream": {
+        "filter": "/FlateDecode",
+        "is": true,
+        "length": 46
+      }
+    },
+    "90 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "91 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "92 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "93 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "94 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "95 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "96 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "97 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "98 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    },
+    "99 0 R": {
+      "stream": {
+        "filter": null,
+        "is": false,
+        "length": null
+      }
+    }
+  },
+  "objects": {
+    "1 0 R": {
+      "/Annots": [
+        "127 0 R",
+        "128 0 R",
+        "129 0 R"
+      ],
+      "/Contents": "2 0 R",
+      "/MediaBox": [
+        0,
+        0,
+        612,
+        792
+      ],
+      "/Parent": "49 0 R",
+      "/Resources": "130 0 R",
+      "/Type": "/Page"
+    },
+    "10 0 R": {
+      "/E": 341074,
+      "/H": [
+        1820,
+        213
+      ],
+      "/L": 370693,
+      "/Linearized": 1,
+      "/N": 4,
+      "/O": 14,
+      "/T": 370366
+    },
+    "100 0 R": {
+      "/A": {
+        "/D": "cite.lsp",
+        "/S": "/GoTo"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        0
+      ],
+      "/H": "/I",
+      "/Rect": [
+        179.534,
+        331.752,
+        186.159,
+        340.006
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "101 0 R": {
+      "/A": {
+        "/D": "cite.Copilot",
+        "/S": "/GoTo"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        0
+      ],
+      "/H": "/I",
+      "/Rect": [
+        159.066,
+        295.887,
+        165.691,
+        304.141
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "102 0 R": {
+      "/A": {
+        "/D": "cite.ding2024longrope",
+        "/S": "/GoTo"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        0
+      ],
+      "/H": "/I",
+      "/Rect": [
+        107.659,
+        224.246,
+        114.284,
+        232.41
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "103 0 R": {
+      "/A": {
+        "/D": "cite.hoffmann2022training",
+        "/S": "/GoTo"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        0
+      ],
+      "/H": "/I",
+      "/Rect": [
+        116.96,
+        224.156,
+        123.585,
+        232.41
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "104 0 R": {
+      "/A": {
+        "/D": "cite.DBLP:journals/corr/abs-2312-10997",
+        "/S": "/GoTo"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        0
+      ],
+      "/H": "/I",
+      "/Rect": [
+        224.445,
+        224.246,
+        231.07,
+        232.41
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "105 0 R": {
+      "/A": {
+        "/D": "cite.staticretrievalwithholes",
+        "/S": "/GoTo"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        0
+      ],
+      "/H": "/I",
+      "/Rect": [
+        385.691,
+        563.615,
+        392.316,
+        571.78
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "106 0 R": {
+      "/A": {
+        "/D": "figure.caption.3",
+        "/S": "/GoTo"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        1,
+        0,
+        0
+      ],
+      "/H": "/I",
+      "/Rect": [
+        344.178,
+        391.226,
+        350.822,
+        402.414
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "107 0 R": {
+      "/A": {
+        "/D": "cite.agdahole",
+        "/S": "/GoTo"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        0
+      ],
+      "/H": "/I",
+      "/Rect": [
+        376.595,
+        357.597,
+        383.22,
+        365.851
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "108 0 R": {
+      "/A": {
+        "/D": "cite.haskellhole",
+        "/S": "/GoTo"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        0
+      ],
+      "/H": "/I",
+      "/Rect": [
+        435.046,
+        357.597,
+        446.304,
+        365.851
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "109 0 R": {
+      "/A": {
+        "/D": "figure.caption.3",
+        "/S": "/GoTo"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        1,
+        0,
+        0
+      ],
+      "/H": "/I",
+      "/Rect": [
+        533.568,
+        343.405,
+        540.286,
+        354.593
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "11 0 R": {
+      "/DecodeParms": {
+        "/Columns": 5,
+        "/Predictor": 12
+      },
+      "/Filter": "/FlateDecode",
+      "/ID": [
+        "q¿Hµ¦×ł5˛B\u0014ž}ÍÚ\u0017",
+        "b‰a¨c!ë©–Œ¯KÛŽÃÒ"
+      ],
+      "/Index": [
+        10,
+        155
+      ],
+      "/Info": "8 0 R",
+      "/Length": 112,
+      "/Prev": 370367,
+      "/Root": "12 0 R",
+      "/Size": 165,
+      "/Type": "/XRef",
+      "/W": [
+        1,
+        3,
+        1
+      ]
+    },
+    "110 0 R": {
+      "/A": {
+        "/D": "figure.caption.3",
+        "/S": "/GoTo"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        1,
+        0,
+        0
+      ],
+      "/H": "/I",
+      "/Rect": [
+        391.39,
+        283.629,
+        398.015,
+        294.817
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "111 0 R": {
+      "/A": {
+        "/D": "figure.caption.3",
+        "/S": "/GoTo"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        1,
+        0,
+        0
+      ],
+      "/H": "/I",
+      "/Rect": [
+        512.66,
+        195.06,
+        519.377,
+        206.248
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "112 0 R": {
+      "/Font": {
+        "/F145": "47 0 R",
+        "/F146": "46 0 R",
+        "/F172": "41 0 R",
+        "/F175": "42 0 R",
+        "/F197": "43 0 R",
+        "/F202": "44 0 R",
+        "/F218": "45 0 R",
+        "/F236": "48 0 R"
+      },
+      "/ProcSet": [
+        "/PDF",
+        "/Text"
+      ]
+    },
+    "113 0 R": {
+      "/D": [
+        "14 0 R",
+        "/XYZ",
+        53,
+        747.899,
+        null
+      ]
+    },
+    "114 0 R": {
+      "/D": [
+        "14 0 R",
+        "/XYZ",
+        54,
+        622.42,
+        null
+      ]
+    },
+    "115 0 R": {
+      "/D": [
+        "14 0 R",
+        "/XYZ",
+        54,
+        626.405,
+        null
+      ]
+    },
+    "116 0 R": {
+      "/A": {
+        "/S": "/URI",
+        "/Type": "/Action",
+        "/URI": "https://doi.org/10.1145/nnnnnnn.nnnnnnn"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        1
+      ],
+      "/H": "/I",
+      "/Rect": [
+        53.004,
+        389.682,
+        88.826,
+        395.705
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "117 0 R": {
+      "/D": [
+        "14 0 R",
+        "/XYZ",
+        317.955,
+        531.398,
+        null
+      ]
+    },
+    "118 0 R": {
+      "/D": [
+        "3 0 R",
+        "/XYZ",
+        53,
+        747.899,
+        null
+      ]
+    },
+    "119 0 R": {
+      "/D": [
+        "3 0 R",
+        "/XYZ",
+        57.706,
+        448.02,
+        null
+      ]
+    },
+    "12 0 R": {
+      "/Lang": "en",
+      "/Metadata": "7 0 R",
+      "/Names": "68 0 R",
+      "/OpenAction": "96 0 R",
+      "/Outlines": "61 0 R",
+      "/PageMode": "/UseOutlines",
+      "/Pages": "49 0 R",
+      "/Type": "/Catalog",
+      "/ViewerPreferences": {
+        "/DisplayDocTitle": true
+      }
+    },
+    "120 0 R": {
+      "/D": [
+        "3 0 R",
+        "/XYZ",
+        57.706,
+        637.31,
+        null
+      ]
+    },
+    "121 0 R": {
+      "/D": [
+        "3 0 R",
+        "/XYZ",
+        57.706,
+        677.161,
+        null
+      ]
+    },
+    "122 0 R": {
+      "/D": [
+        "3 0 R",
+        "/XYZ",
+        57.706,
+        547.646,
+        null
+      ]
+    },
+    "123 0 R": {
+      "/D": [
+        "3 0 R",
+        "/XYZ",
+        57.706,
+        607.422,
+        null
+      ]
+    },
+    "124 0 R": {
+      "/D": [
+        "3 0 R",
+        "/XYZ",
+        57.706,
+        707.049,
+        null
+      ]
+    },
+    "125 0 R": {
+      "/D": [
+        "3 0 R",
+        "/XYZ",
+        57.706,
+        428.095,
+        null
+      ]
+    },
+    "126 0 R": {
+      "/D": [
+        "3 0 R",
+        "/XYZ",
+        54,
+        408.169,
+        null
+      ]
+    },
+    "127 0 R": {
+      "/A": {
+        "/D": "cite.lspspecs3.17",
+        "/S": "/GoTo"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        0
+      ],
+      "/H": "/I",
+      "/Rect": [
+        248.686,
+        496.742,
+        255.311,
+        504.996
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "128 0 R": {
+      "/A": {
+        "/D": "figure.caption.3",
+        "/S": "/GoTo"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        1,
+        0,
+        0
+      ],
+      "/H": "/I",
+      "/Rect": [
+        184.762,
+        393.121,
+        191.332,
+        404.309
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "129 0 R": {
+      "/A": {
+        "/D": "cite.codeql",
+        "/S": "/GoTo"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        0
+      ],
+      "/H": "/I",
+      "/Rect": [
+        241.427,
+        242.675,
+        248.052,
+        250.929
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "13 0 R": {
+      "/Filter": "/FlateDecode",
+      "/Length": 127,
+      "/O": 144,
+      "/S": 78
+    },
+    "130 0 R": {
+      "/Font": {
+        "/F172": "41 0 R",
+        "/F175": "42 0 R",
+        "/F197": "43 0 R",
+        "/F202": "44 0 R",
+        "/F236": "48 0 R"
+      },
+      "/ProcSet": [
+        "/PDF",
+        "/Text"
+      ]
+    },
+    "131 0 R": {
+      "/D": [
+        "1 0 R",
+        "/XYZ",
+        53,
+        747.899,
+        null
+      ]
+    },
+    "132 0 R": {
+      "/D": [
+        "1 0 R",
+        "/XYZ",
+        317.955,
+        105.305,
+        null
+      ]
+    },
+    "133 0 R": {
+      "/D": [
+        "3 0 R",
+        "/XYZ",
+        57.706,
+        477.908,
+        null
+      ]
+    },
+    "134 0 R": {
+      "/D": [
+        "3 0 R",
+        "/XYZ",
+        57.706,
+        557.609,
+        null
+      ]
+    },
+    "135 0 R": {
+      "/A": {
+        "/S": "/URI",
+        "/Type": "/Action",
+        "/URI": "https://arxiv.org/abs/2402.13753"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        1
+      ],
+      "/H": "/I",
+      "/Rect": [
+        89.945,
+        634.78,
+        127.046,
+        643.929
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "136 0 R": {
+      "/A": {
+        "/S": "/URI",
+        "/Type": "/Action",
+        "/URI": "https://github.blog/2021-06-29-introducing-github-copilot-ai-pair-programmer/"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        1
+      ],
+      "/H": "/I",
+      "/Rect": [
+        104.71,
+        614.5,
+        295.041,
+        623.845
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "137 0 R": {
+      "/A": {
+        "/S": "/URI",
+        "/Type": "/Action",
+        "/URI": "https://doi.org/10.48550/ARXIV.2312.10997"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        1
+      ],
+      "/H": "/I",
+      "/Rect": [
+        192.573,
+        564.686,
+        295.041,
+        574.191
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "138 0 R": {
+      "/A": {
+        "/S": "/URI",
+        "/Type": "/Action",
+        "/URI": "https://arxiv.org/abs/2312.10997"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        1
+      ],
+      "/H": "/I",
+      "/Rect": [
+        127.046,
+        556.515,
+        164.147,
+        563.834
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "139 0 R": {
+      "/A": {
+        "/S": "/URI",
+        "/Type": "/Action",
+        "/URI": "https://codeql.github.com"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        1
+      ],
+      "/H": "/I",
+      "/Rect": [
+        150.006,
+        544.761,
+        235.533,
+        554.265
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "14 0 R": {
+      "/Annots": [
+        "98 0 R",
+        "99 0 R",
+        "116 0 R",
+        "100 0 R",
+        "101 0 R",
+        "102 0 R",
+        "103 0 R",
+        "104 0 R",
+        "97 0 R",
+        "105 0 R",
+        "106 0 R",
+        "107 0 R",
+        "108 0 R",
+        "109 0 R",
+        "110 0 R",
+        "111 0 R"
+      ],
+      "/Contents": "16 0 R",
+      "/MediaBox": [
+        0,
+        0,
+        612,
+        792
+      ],
+      "/Parent": "49 0 R",
+      "/Resources": "112 0 R",
+      "/Type": "/Page"
+    },
+    "140 0 R": {
+      "/A": {
+        "/S": "/URI",
+        "/Type": "/Action",
+        "/URI": "https://arxiv.org/abs/2203.15556"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        1
+      ],
+      "/H": "/I",
+      "/Rect": [
+        172.938,
+        475.031,
+        210.039,
+        484.527
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "141 0 R": {
+      "/A": {
+        "/S": "/URI",
+        "/Type": "/Action",
+        "/URI": "https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        1
+      ],
+      "/H": "/I",
+      "/Rect": [
+        116.872,
+        455.097,
+        295.041,
+        464.442
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "142 0 R": {
+      "/A": {
+        "/S": "/URI",
+        "/Type": "/Action",
+        "/URI": "https://microsoft.github.io/language-server-protocol/"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        1
+      ],
+      "/H": "/I",
+      "/Rect": [
+        275.564,
+        435.18,
+        295.041,
+        444.676
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "143 0 R": {
+      "/A": {
+        "/S": "/URI",
+        "/Type": "/Action",
+        "/URI": "https://agda.readthedocs.io/en/v2.6.0.1/language/lexical-structure.html"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        1
+      ],
+      "/H": "/I",
+      "/Rect": [
+        212.633,
+        415.247,
+        295.041,
+        424.751
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "144 0 R": {
+      "/A": {
+        "/S": "/URI",
+        "/Type": "/Action",
+        "/URI": "https://downloads.haskell.org/~ghc/7.10.3-rc1/users_guide/typed-holes.html"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        1
+      ],
+      "/H": "/I",
+      "/Rect": [
+        125.396,
+        375.396,
+        295.041,
+        384.741
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "145 0 R": {
+      "/Font": {
+        "/F172": "41 0 R",
+        "/F175": "42 0 R",
+        "/F197": "43 0 R",
+        "/F202": "44 0 R"
+      },
+      "/ProcSet": [
+        "/PDF",
+        "/Text"
+      ]
+    },
+    "146 0 R": {
+      "/D": [
+        "3 0 R",
+        "/XYZ",
+        54,
+        723.985,
+        null
+      ]
+    },
+    "147 0 R": {
+      "/A": {
+        "/S": "/URI",
+        "/Type": "/Action",
+        "/URI": "https://github.blog/2021-06-29-introducing-github-copilot-ai-pair-programmer/"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        1
+      ],
+      "/H": "/I",
+      "/Rect": [
+        70.076,
+        604.537,
+        140.619,
+        613.655
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "148 0 R": {
+      "/A": {
+        "/S": "/URI",
+        "/Type": "/Action",
+        "/URI": "https://doi.org/10.48550/ARXIV.2312.10997"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        1
+      ],
+      "/H": "/I",
+      "/Rect": [
+        70.076,
+        556.515,
+        107.177,
+        563.834
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "149 0 R": {
+      "/A": {
+        "/S": "/URI",
+        "/Type": "/Action",
+        "/URI": "https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        1
+      ],
+      "/H": "/I",
+      "/Rect": [
+        70.076,
+        445.175,
+        190.584,
+        454.48
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "15 0 R": {
+      "/Filter": "/FlateDecode",
+      "/Length": 843
+    },
+    "150 0 R": {
+      "/A": {
+        "/S": "/URI",
+        "/Type": "/Action",
+        "/URI": "https://microsoft.github.io/language-server-protocol/"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        1
+      ],
+      "/H": "/I",
+      "/Rect": [
+        70.076,
+        425.209,
+        226.808,
+        434.554
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "151 0 R": {
+      "/A": {
+        "/S": "/URI",
+        "/Type": "/Action",
+        "/URI": "https://agda.readthedocs.io/en/v2.6.0.1/language/lexical-structure.html"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        1
+      ],
+      "/H": "/I",
+      "/Rect": [
+        70.076,
+        405.284,
+        220.547,
+        414.629
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "152 0 R": {
+      "/A": {
+        "/S": "/URI",
+        "/Type": "/Action",
+        "/URI": "https://downloads.haskell.org/~ghc/7.10.3-rc1/users_guide/typed-holes.html"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        1
+      ],
+      "/H": "/I",
+      "/Rect": [
+        70.076,
+        365.434,
+        149.231,
+        374.779
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "153 0 R": {
+      "/Font": {
+        "/F202": "44 0 R"
+      },
+      "/ProcSet": [
+        "/PDF",
+        "/Text"
+      ]
+    },
+    "154 0 R": {
+      "/D": [
+        "5 0 R",
+        "/XYZ",
+        53,
+        747.899,
+        null
+      ]
+    },
+    "155 0 R": [
+      497
+    ],
+    "156 0 R": [
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500
+    ],
+    "157 0 R": [
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500
+    ],
+    "158 0 R": [
+      695
+    ],
+    "159 0 R": [
+      636,
+      602,
+      1247,
+      411,
+      250,
+      228,
+      336,
+      470,
+      465,
+      680,
+      710,
+      268,
+      300,
+      300,
+      433,
+      527,
+      220,
+      333,
+      220,
+      323,
+      465,
+      465,
+      465,
+      465,
+      465,
+      465,
+      465,
+      465,
+      465,
+      465,
+      220,
+      220,
+      487,
+      527,
+      487,
+      405,
+      895,
+      629,
+      616,
+      677,
+      710,
+      538,
+      504,
+      717,
+      726,
+      294,
+      320,
+      629,
+      515,
+      886,
+      718,
+      741,
+      559,
+      741,
+      600,
+      506,
+      540,
+      692,
+      631,
+      951,
+      581,
+      582,
+      622,
+      361,
+      292,
+      361,
+      518,
+      486,
+      268,
+      481,
+      504,
+      429,
+      530,
+      453,
+      314,
+      499,
+      549,
+      260,
+      272,
+      503,
+      252,
+      807,
+      539,
+      500,
+      523,
+      522,
+      355,
+      396,
+      340,
+      537,
+      462,
+      722,
+      455,
+      506,
+      416,
+      277,
+      210,
+      277,
+      449
+    ],
+    "16 0 R": {
+      "/Filter": "/FlateDecode",
+      "/Length": 5019
+    },
+    "160 0 R": [
+      268,
+      306,
+      313,
+      433,
+      527,
+      219,
+      333,
+      219,
+      291,
+      444,
+      444,
+      444,
+      444,
+      444,
+      444,
+      444,
+      444,
+      444,
+      444,
+      219,
+      219,
+      487,
+      527,
+      487,
+      405,
+      829,
+      667,
+      557,
+      616,
+      667,
+      526,
+      457,
+      664,
+      673,
+      280,
+      414,
+      637,
+      519,
+      804,
+      666,
+      668,
+      499,
+      668,
+      555,
+      454,
+      544,
+      634,
+      597,
+      909,
+      628,
+      552,
+      578,
+      334,
+      321,
+      334,
+      518,
+      486,
+      268,
+      486,
+      478,
+      389,
+      489,
+      401,
+      314,
+      477,
+      519,
+      276,
+      259,
+      486,
+      266,
+      783,
+      518,
+      447,
+      489,
+      491,
+      357,
+      353,
+      307,
+      521,
+      472,
+      688,
+      475,
+      503,
+      436,
+      273,
+      205
+    ],
+    "161 0 R": [
+      560,
+      829,
+      582,
+      540,
+      815,
+      250,
+      288,
+      336,
+      465,
+      465,
+      637,
+      705,
+      268,
+      298,
+      298,
+      369,
+      550,
+      220,
+      338,
+      220,
+      323,
+      465,
+      465,
+      465,
+      465,
+      465,
+      465,
+      465,
+      465,
+      465,
+      465,
+      236,
+      236,
+      550,
+      550,
+      550,
+      435,
+      895,
+      695,
+      588,
+      646,
+      701,
+      557,
+      485,
+      685,
+      730,
+      297,
+      322,
+      637,
+      528,
+      839,
+      699,
+      702,
+      541,
+      702,
+      587,
+      485,
+      597,
+      661,
+      652,
+      951,
+      660,
+      575,
+      604,
+      356,
+      287,
+      356,
+      518,
+      486,
+      268,
+      457,
+      493,
+      428,
+      506,
+      447,
+      310,
+      500,
+      538,
+      271,
+      272,
+      512,
+      264,
+      790,
+      542,
+      504,
+      519,
+      503,
+      372,
+      390,
+      316,
+      531,
+      497,
+      747,
+      490,
+      515,
+      424
+    ],
+    "162 0 R": [
+      244,
+      316,
+      514,
+      514,
+      514,
+      514,
+      514,
+      514,
+      514,
+      514,
+      514,
+      514,
+      256,
+      256,
+      512,
+      551,
+      512,
+      430,
+      988,
+      740,
+      654,
+      706,
+      734,
+      609,
+      545,
+      732,
+      817,
+      367,
+      373,
+      736,
+      577,
+      899,
+      740,
+      730,
+      614,
+      730,
+      716,
+      504,
+      652,
+      732,
+      700,
+      1028,
+      718,
+      624,
+      624,
+      397,
+      307,
+      397,
+      518,
+      486,
+      253,
+      506,
+      542,
+      456,
+      561,
+      489,
+      391,
+      521,
+      619,
+      322,
+      312,
+      613,
+      325,
+      905,
+      616,
+      551,
+      581,
+      573,
+      428,
+      427,
+      358,
+      598,
+      529,
+      777,
+      561,
+      558,
+      452
+    ],
+    "163 0 R": {
+      "/Ascent": 676,
+      "/CapHeight": 633,
+      "/CharSet": "/b/c/e/m/n/o/p/r/s/t/u/y",
+      "/Descent": -175,
+      "/Flags": 4,
+      "/FontBBox": [
+        -12,
+        -190,
+        517,
+        860
+      ],
+      "/FontFile": "17 0 R",
+      "/FontName": "/KKDMNC+Inconsolatazi4-Bold",
+      "/ItalicAngle": 0,
+      "/StemV": 112,
+      "/Type": "/FontDescriptor",
+      "/XHeight": 467
+    },
+    "164 0 R": {
+      "/Ascent": 658,
+      "/CapHeight": 630,
+      "/CharSet": "/A/C/D/E/M/T/a/asterisk/bar/braceleft/braceright/bracketleft/bracketright/c/colon/comma/d/e/equal/greater/h/i/l/m/n/o/one/parenleft/parenright/period/question/r/s/semicolon/slash/t/u/w/y/zero",
+      "/Descent": -174,
+      "/Flags": 4,
+      "/FontBBox": [
+        0,
+        -177,
+        509,
+        835
+      ],
+      "/FontFile": "18 0 R",
+      "/FontName": "/IZYOMP+Inconsolatazi4-Regular",
+      "/ItalicAngle": 0,
+      "/StemV": 72,
+      "/Type": "/FontDescriptor",
+      "/XHeight": 457
+    },
+    "17 0 R": {
+      "/Filter": "/FlateDecode",
+      "/Length": 15431,
+      "/Length1": 1523,
+      "/Length2": 14579,
+      "/Length3": 0
+    },
+    "18 0 R": {
+      "/Filter": "/FlateDecode",
+      "/Length": 13228,
+      "/Length1": 2277,
+      "/Length2": 12054,
+      "/Length3": 0
+    },
+    "19 0 R": {
+      "/Filter": "/FlateDecode",
+      "/Length": 689
+    },
+    "2 0 R": {
+      "/Filter": "/FlateDecode",
+      "/Length": 4961
+    },
+    "20 0 R": {
+      "/Filter": "/FlateDecode",
+      "/Length": 45471,
+      "/Length1": 895,
+      "/Length2": 44881,
+      "/Length3": 0
+    },
+    "21 0 R": {
+      "/Filter": "/FlateDecode",
+      "/Length": 90729,
+      "/Length1": 1748,
+      "/Length2": 90651,
+      "/Length3": 0
+    },
+    "22 0 R": {
+      "/Filter": "/FlateDecode",
+      "/Length": 87773,
+      "/Length1": 1756,
+      "/Length2": 87702,
+      "/Length3": 0
+    },
+    "23 0 R": {
+      "/Filter": "/FlateDecode",
+      "/Length": 59030,
+      "/Length1": 909,
+      "/Length2": 58643,
+      "/Length3": 0
+    },
+    "24 0 R": {
+      "/Filter": "/FlateDecode",
+      "/Length": 9036,
+      "/Length1": 839,
+      "/Length2": 8413,
+      "/Length3": 0
+    },
+    "25 0 R": {
+      "/Filter": "/FlateDecode",
+      "/Length": 881
+    },
+    "26 0 R": {
+      "/Filter": "/FlateDecode",
+      "/Length": 877
+    },
+    "27 0 R": {
+      "/Filter": "/FlateDecode",
+      "/Length": 874
+    },
+    "28 0 R": {
+      "/Filter": "/FlateDecode",
+      "/Length": 876
+    },
+    "29 0 R": {
+      "/Filter": "/FlateDecode",
+      "/Length": 1012
+    },
+    "3 0 R": {
+      "/Annots": [
+        "135 0 R",
+        "136 0 R",
+        "147 0 R",
+        "137 0 R",
+        "148 0 R",
+        "138 0 R",
+        "139 0 R",
+        "140 0 R",
+        "141 0 R",
+        "149 0 R",
+        "142 0 R",
+        "150 0 R",
+        "143 0 R",
+        "151 0 R",
+        "144 0 R",
+        "152 0 R"
+      ],
+      "/Contents": "4 0 R",
+      "/MediaBox": [
+        0,
+        0,
+        612,
+        792
+      ],
+      "/Parent": "49 0 R",
+      "/Resources": "145 0 R",
+      "/Type": "/Page"
+    },
+    "30 0 R": {
+      "/Filter": "/FlateDecode",
+      "/First": 281,
+      "/Length": 2074,
+      "/N": 37,
+      "/Type": "/ObjStm"
+    },
+    "31 0 R": {
+      "/Filter": "/FlateDecode",
+      "/First": 819,
+      "/Length": 3354,
+      "/N": 96,
+      "/Type": "/ObjStm"
+    },
+    "32 0 R": {
+      "/A": "69 0 R",
+      "/Next": "33 0 R",
+      "/Parent": "61 0 R",
+      "/Title": "71 0 R"
+    },
+    "33 0 R": {
+      "/A": "72 0 R",
+      "/Next": "34 0 R",
+      "/Parent": "61 0 R",
+      "/Prev": "32 0 R",
+      "/Title": "74 0 R"
+    },
+    "34 0 R": {
+      "/A": "75 0 R",
+      "/Count": -2,
+      "/First": "35 0 R",
+      "/Last": "36 0 R",
+      "/Next": "37 0 R",
+      "/Parent": "61 0 R",
+      "/Prev": "33 0 R",
+      "/Title": "77 0 R"
+    },
+    "35 0 R": {
+      "/A": "78 0 R",
+      "/Next": "36 0 R",
+      "/Parent": "34 0 R",
+      "/Title": "80 0 R"
+    },
+    "36 0 R": {
+      "/A": "81 0 R",
+      "/Parent": "34 0 R",
+      "/Prev": "35 0 R",
+      "/Title": "83 0 R"
+    },
+    "37 0 R": {
+      "/A": "84 0 R",
+      "/Next": "38 0 R",
+      "/Parent": "61 0 R",
+      "/Prev": "34 0 R",
+      "/Title": "86 0 R"
+    },
+    "38 0 R": {
+      "/A": "87 0 R",
+      "/Next": "39 0 R",
+      "/Parent": "61 0 R",
+      "/Prev": "37 0 R",
+      "/Title": "89 0 R"
+    },
+    "39 0 R": {
+      "/A": "90 0 R",
+      "/Next": "40 0 R",
+      "/Parent": "61 0 R",
+      "/Prev": "38 0 R",
+      "/Title": "92 0 R"
+    },
+    "4 0 R": {
+      "/Filter": "/FlateDecode",
+      "/Length": 2325
+    },
+    "40 0 R": {
+      "/A": "93 0 R",
+      "/Parent": "61 0 R",
+      "/Prev": "39 0 R",
+      "/Title": "95 0 R"
+    },
+    "41 0 R": {
+      "/BaseFont": "/ZWVGGC+LinLibertineTB",
+      "/Encoding": "55 0 R",
+      "/FirstChar": 46,
+      "/FontDescriptor": "58 0 R",
+      "/LastChar": 122,
+      "/Subtype": "/Type1",
+      "/ToUnicode": "27 0 R",
+      "/Type": "/Font",
+      "/Widths": "162 0 R"
+    },
+    "42 0 R": {
+      "/BaseFont": "/AYKBXK+LinLibertineT",
+      "/Encoding": "54 0 R",
+      "/FirstChar": 27,
+      "/FontDescriptor": "57 0 R",
+      "/LastChar": 122,
+      "/Subtype": "/Type1",
+      "/ToUnicode": "26 0 R",
+      "/Type": "/Font",
+      "/Widths": "161 0 R"
+    },
+    "43 0 R": {
+      "/BaseFont": "/WFJMPU+LinLibertineTI",
+      "/Encoding": "53 0 R",
+      "/FirstChar": 39,
+      "/FontDescriptor": "59 0 R",
+      "/LastChar": 124,
+      "/Subtype": "/Type1",
+      "/ToUnicode": "28 0 R",
+      "/Type": "/Font",
+      "/Widths": "160 0 R"
+    },
+    "44 0 R": {
+      "/BaseFont": "/XXWHEJ+LinBiolinumT",
+      "/Encoding": "52 0 R",
+      "/FirstChar": 28,
+      "/FontDescriptor": "56 0 R",
+      "/LastChar": 126,
+      "/Subtype": "/Type1",
+      "/ToUnicode": "25 0 R",
+      "/Type": "/Font",
+      "/Widths": "159 0 R"
+    },
+    "45 0 R": {
+      "/BaseFont": "/AYKBXK+LinLibertineT",
+      "/Encoding": "51 0 R",
+      "/FirstChar": 169,
+      "/FontDescriptor": "57 0 R",
+      "/LastChar": 169,
+      "/Subtype": "/Type1",
+      "/ToUnicode": "19 0 R",
+      "/Type": "/Font",
+      "/Widths": "158 0 R"
+    },
+    "46 0 R": {
+      "/BaseFont": "/KKDMNC+Inconsolatazi4-Bold",
+      "/Encoding": "50 0 R",
+      "/FirstChar": 98,
+      "/FontDescriptor": "163 0 R",
+      "/LastChar": 121,
+      "/Subtype": "/Type1",
+      "/ToUnicode": "15 0 R",
+      "/Type": "/Font",
+      "/Widths": "157 0 R"
+    },
+    "47 0 R": {
+      "/BaseFont": "/IZYOMP+Inconsolatazi4-Regular",
+      "/Encoding": "50 0 R",
+      "/FirstChar": 40,
+      "/FontDescriptor": "164 0 R",
+      "/LastChar": 125,
+      "/Subtype": "/Type1",
+      "/ToUnicode": "15 0 R",
+      "/Type": "/Font",
+      "/Widths": "156 0 R"
+    },
+    "48 0 R": {
+      "/BaseFont": "/URWIFX+txsys",
+      "/FirstChar": 15,
+      "/FontDescriptor": "60 0 R",
+      "/LastChar": 15,
+      "/Subtype": "/Type1",
+      "/ToUnicode": "29 0 R",
+      "/Type": "/Font",
+      "/Widths": "155 0 R"
+    },
+    "49 0 R": {
+      "/Count": 4,
+      "/Kids": [
+        "14 0 R",
+        "1 0 R",
+        "3 0 R",
+        "5 0 R"
+      ],
+      "/Type": "/Pages"
+    },
+    "5 0 R": {
+      "/Contents": "6 0 R",
+      "/MediaBox": [
+        0,
+        0,
+        612,
+        792
+      ],
+      "/Parent": "49 0 R",
+      "/Resources": "153 0 R",
+      "/Type": "/Page"
+    },
+    "50 0 R": {
+      "/Differences": [
+        40,
+        "/parenleft",
+        "/parenright",
+        "/asterisk",
+        44,
+        "/comma",
+        46,
+        "/period",
+        "/slash",
+        "/zero",
+        "/one",
+        58,
+        "/colon",
+        "/semicolon",
+        61,
+        "/equal",
+        "/greater",
+        "/question",
+        65,
+        "/A",
+        67,
+        "/C",
+        "/D",
+        "/E",
+        77,
+        "/M",
+        84,
+        "/T",
+        91,
+        "/bracketleft",
+        93,
+        "/bracketright",
+        97,
+        "/a",
+        "/b",
+        "/c",
+        "/d",
+        "/e",
+        104,
+        "/h",
+        "/i",
+        108,
+        "/l",
+        "/m",
+        "/n",
+        "/o",
+        "/p",
+        114,
+        "/r",
+        "/s",
+        "/t",
+        "/u",
+        119,
+        "/w",
+        121,
+        "/y",
+        123,
+        "/braceleft",
+        "/bar",
+        "/braceright"
+      ],
+      "/Type": "/Encoding"
+    },
+    "51 0 R": {
+      "/Differences": [
+        169,
+        "/copyright"
+      ],
+      "/Type": "/Encoding"
+    },
+    "52 0 R": {
+      "/Differences": [
+        28,
+        "/f_t",
+        "/t_t",
+        39,
+        "/quoteright",
+        44,
+        "/comma",
+        "/hyphen",
+        "/period",
+        "/slash",
+        "/zero",
+        "/one",
+        "/two",
+        "/three",
+        "/four",
+        "/five",
+        "/six",
+        "/seven",
+        "/eight",
+        "/nine",
+        "/colon",
+        65,
+        "/A",
+        67,
+        "/C",
+        "/D",
+        73,
+        "/I",
+        "/J",
+        "/K",
+        "/L",
+        "/M",
+        80,
+        "/P",
+        82,
+        "/R",
+        "/S",
+        85,
+        "/U",
+        "/V",
+        "/W",
+        "/X",
+        95,
+        "/underscore",
+        97,
+        "/a",
+        "/b",
+        "/c",
+        "/d",
+        "/e",
+        "/f",
+        "/g",
+        "/h",
+        "/i",
+        107,
+        "/k",
+        "/l",
+        "/m",
+        "/n",
+        "/o",
+        "/p",
+        "/q",
+        "/r",
+        "/s",
+        "/t",
+        "/u",
+        "/v",
+        "/w",
+        "/x",
+        "/y",
+        "/z",
+        126,
+        "/asciitilde"
+      ],
+      "/Type": "/Encoding"
+    },
+    "53 0 R": {
+      "/Differences": [
+        39,
+        "/quoteright",
+        "/parenleft",
+        "/parenright",
+        44,
+        "/comma",
+        46,
+        "/period",
+        "/slash",
+        "/zero",
+        "/one",
+        "/two",
+        55,
+        "/seven",
+        58,
+        "/colon",
+        61,
+        "/equal",
+        "/greater",
+        "/question",
+        65,
+        "/A",
+        67,
+        "/C",
+        "/D",
+        "/E",
+        72,
+        "/H",
+        74,
+        "/J",
+        82,
+        "/R",
+        "/S",
+        "/T",
+        "/U",
+        87,
+        "/W",
+        91,
+        "/bracketleft",
+        93,
+        "/bracketright",
+        97,
+        "/a",
+        "/b",
+        "/c",
+        "/d",
+        "/e",
+        "/f",
+        "/g",
+        "/h",
+        "/i",
+        107,
+        "/k",
+        "/l",
+        "/m",
+        "/n",
+        "/o",
+        "/p",
+        114,
+        "/r",
+        "/s",
+        "/t",
+        "/u",
+        "/v",
+        "/w",
+        "/x",
+        "/y",
+        124,
+        "/bar"
+      ],
+      "/Type": "/Encoding"
+    },
+    "54 0 R": {
+      "/Differences": [
+        27,
+        "/f_i",
+        "/f_f_i",
+        "/f_f",
+        "/f_l",
+        39,
+        "/quoteright",
+        "/parenleft",
+        "/parenright",
+        44,
+        "/comma",
+        "/hyphen",
+        "/period",
+        "/slash",
+        "/zero",
+        "/one",
+        "/two",
+        "/three",
+        "/four",
+        "/five",
+        "/six",
+        "/seven",
+        "/eight",
+        "/nine",
+        "/colon",
+        64,
+        "/at",
+        "/A",
+        "/B",
+        "/C",
+        "/D",
+        "/E",
+        "/F",
+        "/G",
+        "/H",
+        "/I",
+        "/J",
+        "/K",
+        "/L",
+        "/M",
+        "/N",
+        "/O",
+        "/P",
+        "/Q",
+        "/R",
+        "/S",
+        "/T",
+        "/U",
+        "/V",
+        "/W",
+        "/X",
+        "/Y",
+        "/Z",
+        "/bracketleft",
+        93,
+        "/bracketright",
+        97,
+        "/a",
+        "/b",
+        "/c",
+        "/d",
+        "/e",
+        "/f",
+        "/g",
+        "/h",
+        "/i",
+        "/j",
+        "/k",
+        "/l",
+        "/m",
+        "/n",
+        "/o",
+        "/p",
+        "/q",
+        "/r",
+        "/s",
+        "/t",
+        "/u",
+        "/v",
+        "/w",
+        "/x",
+        "/y",
+        "/z"
+      ],
+      "/Type": "/Encoding"
+    },
+    "55 0 R": {
+      "/Differences": [
+        46,
+        "/period",
+        49,
+        "/one",
+        "/two",
+        "/three",
+        "/four",
+        58,
+        "/colon",
+        65,
+        "/A",
+        "/B",
+        "/C",
+        "/D",
+        "/E",
+        "/F",
+        73,
+        "/I",
+        76,
+        "/L",
+        "/M",
+        79,
+        "/O",
+        "/P",
+        82,
+        "/R",
+        "/S",
+        "/T",
+        87,
+        "/W",
+        97,
+        "/a",
+        "/b",
+        "/c",
+        "/d",
+        "/e",
+        "/f",
+        "/g",
+        "/h",
+        "/i",
+        107,
+        "/k",
+        "/l",
+        "/m",
+        "/n",
+        "/o",
+        "/p",
+        114,
+        "/r",
+        "/s",
+        "/t",
+        "/u",
+        "/v",
+        "/w",
+        "/x",
+        "/y",
+        "/z"
+      ],
+      "/Type": "/Encoding"
+    },
+    "56 0 R": {
+      "/Ascent": 685,
+      "/CapHeight": 657,
+      "/CharSet": "/A/C/D/I/J/K/L/M/P/R/S/U/V/W/X/a/asciitilde/b/c/colon/comma/d/e/eight/f/f_t/five/four/g/h/hyphen/i/k/l/m/n/nine/o/one/p/period/q/quoteright/r/s/seven/six/slash/t/t_t/three/two/u/underscore/v/w/x/y/z/zero",
+      "/Descent": -237,
+      "/Flags": 4,
+      "/FontBBox": [
+        -1082,
+        -268,
+        6171,
+        893
+      ],
+      "/FontFile": "20 0 R",
+      "/FontName": "/XXWHEJ+LinBiolinumT",
+      "/ItalicAngle": 0,
+      "/StemV": 80,
+      "/Type": "/FontDescriptor",
+      "/XHeight": 432
+    },
+    "57 0 R": {
+      "/Ascent": 0,
+      "/CapHeight": 0,
+      "/CharSet": "/A/B/C/D/E/F/G/H/I/J/K/L/M/N/O/P/Q/R/S/T/U/V/W/X/Y/Z/a/at/b/bracketleft/bracketright/c/colon/comma/copyright/d/e/eight/f/f_f/f_f_i/f_i/f_l/five/four/g/h/hyphen/i/j/k/l/m/n/nine/o/one/p/parenleft/parenright/period/q/quoteright/r/s/seven/six/slash/t/three/two/u/v/w/x/y/z/zero",
+      "/Descent": 0,
+      "/Flags": 4,
+      "/FontBBox": [
+        -1082,
+        -257,
+        6171,
+        1125
+      ],
+      "/FontFile": "21 0 R",
+      "/FontName": "/AYKBXK+LinLibertineT",
+      "/ItalicAngle": 0,
+      "/StemV": 79,
+      "/Type": "/FontDescriptor",
+      "/XHeight": 429
+    },
+    "58 0 R": {
+      "/Ascent": 714,
+      "/CapHeight": 628,
+      "/CharSet": "/A/B/C/D/E/F/I/L/M/O/P/R/S/T/W/a/b/c/colon/d/e/f/four/g/h/i/k/l/m/n/o/one/p/period/r/s/t/three/two/u/v/w/x/y/z",
+      "/Descent": -231,
+      "/Flags": 4,
+      "/FontBBox": [
+        -1082,
+        -328,
+        6171,
+        1014
+      ],
+      "/FontFile": "22 0 R",
+      "/FontName": "/ZWVGGC+LinLibertineTB",
+      "/ItalicAngle": 0,
+      "/StemV": 130,
+      "/Type": "/FontDescriptor",
+      "/XHeight": 433
+    },
+    "59 0 R": {
+      "/Ascent": 696,
+      "/CapHeight": 660,
+      "/CharSet": "/A/C/D/E/H/J/R/S/T/U/W/a/b/bar/bracketleft/bracketright/c/colon/comma/d/e/equal/f/g/greater/h/i/k/l/m/n/o/one/p/parenleft/parenright/period/question/quoteright/r/s/seven/slash/t/two/u/v/w/x/y/zero",
+      "/Descent": -234,
+      "/Flags": 4,
+      "/FontBBox": [
+        -634,
+        -312,
+        6171,
+        893
+      ],
+      "/FontFile": "23 0 R",
+      "/FontName": "/WFJMPU+LinLibertineTI",
+      "/ItalicAngle": -12,
+      "/StemV": 76,
+      "/Type": "/FontDescriptor",
+      "/XHeight": 429
+    },
+    "6 0 R": {
+      "/Filter": "/FlateDecode",
+      "/Length": 149
+    },
+    "60 0 R": {
+      "/Ascent": 707,
+      "/CapHeight": 707,
+      "/CharSet": "/bullet",
+      "/Descent": -152,
+      "/Flags": 4,
+      "/FontBBox": [
+        -47,
+        -944,
+        2835,
+        838
+      ],
+      "/FontFile": "24 0 R",
+      "/FontName": "/URWIFX+txsys",
+      "/ItalicAngle": 0,
+      "/StemV": 52,
+      "/Type": "/FontDescriptor",
+      "/XHeight": 400
+    },
+    "61 0 R": {
+      "/Count": 7,
+      "/First": "32 0 R",
+      "/Last": "40 0 R",
+      "/Type": "/Outlines"
+    },
+    "62 0 R": {
+      "/Limits": [
+        "Doc-Start",
+        "cite.ding2024longrope"
+      ],
+      "/Names": [
+        "Doc-Start",
+        "114 0 R",
+        "cite.Copilot",
+        "120 0 R",
+        "cite.DBLP:journals/corr/abs-2312-10997",
+        "123 0 R",
+        "cite.agdahole",
+        "125 0 R",
+        "cite.codeql",
+        "134 0 R",
+        "cite.ding2024longrope",
+        "121 0 R"
+      ]
+    },
+    "63 0 R": {
+      "/Limits": [
+        "cite.haskellhole",
+        "figure.caption.3"
+      ],
+      "/Names": [
+        "cite.haskellhole",
+        "126 0 R",
+        "cite.hoffmann2022training",
+        "122 0 R",
+        "cite.lsp",
+        "119 0 R",
+        "cite.lspspecs3.17",
+        "133 0 R",
+        "cite.staticretrievalwithholes",
+        "124 0 R",
+        "figure.caption.3",
+        "117 0 R"
+      ]
+    },
+    "64 0 R": {
+      "/Limits": [
+        "page.1",
+        "section*.2"
+      ],
+      "/Names": [
+        "page.1",
+        "113 0 R",
+        "page.2",
+        "131 0 R",
+        "page.3",
+        "118 0 R",
+        "page.4",
+        "154 0 R",
+        "section*.1",
+        "70 0 R",
+        "section*.2",
+        "115 0 R"
+      ]
+    },
+    "65 0 R": {
+      "/Limits": [
+        "section*.4",
+        "section.2"
+      ],
+      "/Names": [
+        "section*.4",
+        "132 0 R",
+        "section*.5",
+        "91 0 R",
+        "section*.6",
+        "146 0 R",
+        "section*.7",
+        "94 0 R",
+        "section.1",
+        "73 0 R",
+        "section.2",
+        "76 0 R"
+      ]
+    },
+    "66 0 R": {
+      "/Limits": [
+        "section.3",
+        "subsection.2.2"
+      ],
+      "/Names": [
+        "section.3",
+        "85 0 R",
+        "section.4",
+        "88 0 R",
+        "subsection.2.1",
+        "79 0 R",
+        "subsection.2.2",
+        "82 0 R"
+      ]
+    },
+    "67 0 R": {
+      "/Kids": [
+        "62 0 R",
+        "63 0 R",
+        "64 0 R",
+        "65 0 R",
+        "66 0 R"
+      ],
+      "/Limits": [
+        "Doc-Start",
+        "subsection.2.2"
+      ]
+    },
+    "68 0 R": {
+      "/Dests": "67 0 R"
+    },
+    "69 0 R": {
+      "/D": "section*.1",
+      "/S": "/GoTo"
+    },
+    "7 0 R": {
+      "/Length": 19715,
+      "/Subtype": "/XML",
+      "/Type": "/Metadata"
+    },
+    "70 0 R": {
+      "/D": [
+        "14 0 R",
+        "/XYZ",
+        54,
+        622.42,
+        null
+      ]
+    },
+    "71 0 R": "Abstract",
+    "72 0 R": {
+      "/D": "section.1",
+      "/S": "/GoTo"
+    },
+    "73 0 R": {
+      "/D": [
+        "14 0 R",
+        "/XYZ",
+        54,
+        373.647,
+        null
+      ]
+    },
+    "74 0 R": "1 Introduction and Background",
+    "75 0 R": {
+      "/D": "section.2",
+      "/S": "/GoTo"
+    },
+    "76 0 R": {
+      "/D": [
+        "1 0 R",
+        "/XYZ",
+        54,
+        635.467,
+        null
+      ]
+    },
+    "77 0 R": "2 Limitations of Modern Developer Tooling",
+    "78 0 R": {
+      "/D": "subsection.2.1",
+      "/S": "/GoTo"
+    },
+    "79 0 R": {
+      "/D": [
+        "1 0 R",
+        "/XYZ",
+        54,
+        570.221,
+        null
+      ]
+    },
+    "8 0 R": {
+      "/CreationDate": "D:20241126050637Z",
+      "/Creator": "LaTeX with acmart 2024/05/27 v2.08 Typesetting articles for the Association for Computing Machinery and hyperref 2024-01-20 v7.01h Hypertext links for LaTeX",
+      "/ModDate": "D:20241126050637Z",
+      "/PTEX.Fullbanner": "This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) kpathsea version 6.4.0",
+      "/Producer": "pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) kpathsea version 6.4.0",
+      "/Subject": "",
+      "/Title": "ChatLSP: Making Language Servers Do More for Statically Contextualizing Large Language Models",
+      "/Trapped": "/False"
+    },
+    "80 0 R": "2.1 Limitations of the Language Server Protocol",
+    "81 0 R": {
+      "/D": "subsection.2.2",
+      "/S": "/GoTo"
+    },
+    "82 0 R": {
+      "/D": [
+        "1 0 R",
+        "/XYZ",
+        54,
+        268.334,
+        null
+      ]
+    },
+    "83 0 R": "2.2 Limitations of Other Static Analysis Tools",
+    "84 0 R": {
+      "/D": "section.3",
+      "/S": "/GoTo"
+    },
+    "85 0 R": {
+      "/D": [
+        "1 0 R",
+        "/XYZ",
+        317.955,
+        685.436,
+        null
+      ]
+    },
+    "86 0 R": "3 Extending the Protocol",
+    "87 0 R": {
+      "/D": "section.4",
+      "/S": "/GoTo"
+    },
+    "88 0 R": {
+      "/D": [
+        "1 0 R",
+        "/XYZ",
+        317.955,
+        189.961,
+        null
+      ]
+    },
+    "89 0 R": "4 Future Work",
+    "9 0 R": {
+      "/DecodeParms": {
+        "/Columns": 5,
+        "/Predictor": 12
+      },
+      "/Filter": "/FlateDecode",
+      "/ID": [
+        "q¿Hµ¦×ł5˛B\u0014ž}ÍÚ\u0017",
+        "b‰a¨c!ë©–Œ¯KÛŽÃÒ"
+      ],
+      "/Length": 46,
+      "/Size": 10,
+      "/Type": "/XRef",
+      "/W": [
+        1,
+        3,
+        1
+      ]
+    },
+    "90 0 R": {
+      "/D": "section*.5",
+      "/S": "/GoTo"
+    },
+    "91 0 R": {
+      "/D": [
+        "1 0 R",
+        "/XYZ",
+        317.955,
+        85.523,
+        null
+      ]
+    },
+    "92 0 R": "Acknowledgments",
+    "93 0 R": {
+      "/D": "section*.7",
+      "/S": "/GoTo"
+    },
+    "94 0 R": {
+      "/D": [
+        "3 0 R",
+        "/XYZ",
+        54,
+        706.881,
+        null
+      ]
+    },
+    "95 0 R": "References",
+    "96 0 R": {
+      "/D": [
+        "14 0 R",
+        "/Fit"
+      ],
+      "/S": "/GoTo"
+    },
+    "97 0 R": {
+      "/A": {
+        "/S": "/URI",
+        "/Type": "/Action",
+        "/URI": "https://doi.org/10.1145/nnnnnnn.nnnnnnn"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        1
+      ],
+      "/H": "/I",
+      "/Rect": [
+        53.004,
+        72.428,
+        192.257,
+        82.873
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "98 0 R": {
+      "/A": {
+        "/D": "page.3",
+        "/S": "/GoTo"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        1,
+        0,
+        0
+      ],
+      "/H": "/I",
+      "/Rect": [
+        147.123,
+        398.579,
+        153.202,
+        408.856
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "99 0 R": {
+      "/A": {
+        "/S": "/URI",
+        "/Type": "/Action",
+        "/URI": "https://doi.org/10.1145/nnnnnnn.nnnnnnn"
+      },
+      "/Border": [
+        0,
+        0,
+        0
+      ],
+      "/C": [
+        0,
+        1,
+        1
+      ],
+      "/H": "/I",
+      "/Rect": [
+        176.461,
+        398.579,
+        295.041,
+        408.856
+      ],
+      "/Subtype": "/Link",
+      "/Type": "/Annot"
+    },
+    "trailer": {
+      "/DecodeParms": {
+        "/Columns": 5,
+        "/Predictor": 12
+      },
+      "/Filter": "/FlateDecode",
+      "/ID": [
+        "q¿Hµ¦×ł5˛B\u0014ž}ÍÚ\u0017",
+        "b‰a¨c!ë©–Œ¯KÛŽÃÒ"
+      ],
+      "/Index": [
+        10,
+        155
+      ],
+      "/Info": "8 0 R",
+      "/Length": 112,
+      "/Prev": 370367,
+      "/Root": "12 0 R",
+      "/Size": 165,
+      "/Type": "/XRef",
+      "/W": [
+        1,
+        3,
+        1
+      ]
+    }
+  },
+  "outlines": [
+    {
+      "dest": {
+        "/D": [
+          "14 0 R",
+          "/XYZ",
+          54,
+          622.42,
+          null
+        ]
+      },
+      "destpageposfrom1": null,
+      "kids": [],
+      "object": "32 0 R",
+      "open": true,
+      "title": "Abstract"
+    },
+    {
+      "dest": {
+        "/D": [
+          "14 0 R",
+          "/XYZ",
+          54,
+          373.647,
+          null
+        ]
+      },
+      "destpageposfrom1": null,
+      "kids": [],
+      "object": "33 0 R",
+      "open": true,
+      "title": "1 Introduction and Background"
+    },
+    {
+      "dest": {
+        "/D": [
+          "1 0 R",
+          "/XYZ",
+          54,
+          635.467,
+          null
+        ]
+      },
+      "destpageposfrom1": null,
+      "kids": [
+        {
+          "dest": {
+            "/D": [
+              "1 0 R",
+              "/XYZ",
+              54,
+              570.221,
+              null
+            ]
+          },
+          "destpageposfrom1": null,
+          "kids": [],
+          "object": "35 0 R",
+          "open": true,
+          "title": "2.1 Limitations of the Language Server Protocol"
+        },
+        {
+          "dest": {
+            "/D": [
+              "1 0 R",
+              "/XYZ",
+              54,
+              268.334,
+              null
+            ]
+          },
+          "destpageposfrom1": null,
+          "kids": [],
+          "object": "36 0 R",
+          "open": true,
+          "title": "2.2 Limitations of Other Static Analysis Tools"
+        }
+      ],
+      "object": "34 0 R",
+      "open": false,
+      "title": "2 Limitations of Modern Developer Tooling"
+    },
+    {
+      "dest": {
+        "/D": [
+          "1 0 R",
+          "/XYZ",
+          317.955,
+          685.436,
+          null
+        ]
+      },
+      "destpageposfrom1": null,
+      "kids": [],
+      "object": "37 0 R",
+      "open": true,
+      "title": "3 Extending the Protocol"
+    },
+    {
+      "dest": {
+        "/D": [
+          "1 0 R",
+          "/XYZ",
+          317.955,
+          189.961,
+          null
+        ]
+      },
+      "destpageposfrom1": null,
+      "kids": [],
+      "object": "38 0 R",
+      "open": true,
+      "title": "4 Future Work"
+    },
+    {
+      "dest": {
+        "/D": [
+          "1 0 R",
+          "/XYZ",
+          317.955,
+          85.523,
+          null
+        ]
+      },
+      "destpageposfrom1": null,
+      "kids": [],
+      "object": "39 0 R",
+      "open": true,
+      "title": "Acknowledgments"
+    },
+    {
+      "dest": {
+        "/D": [
+          "3 0 R",
+          "/XYZ",
+          54,
+          706.881,
+          null
+        ]
+      },
+      "destpageposfrom1": null,
+      "kids": [],
+      "object": "40 0 R",
+      "open": true,
+      "title": "References"
+    }
+  ],
+  "pagelabels": [],
+  "pages": [
+    {
+      "contents": [
+        "16 0 R"
+      ],
+      "images": [],
+      "label": null,
+      "object": "14 0 R",
+      "outlines": [],
+      "pageposfrom1": 1
+    },
+    {
+      "contents": [
+        "2 0 R"
+      ],
+      "images": [],
+      "label": null,
+      "object": "1 0 R",
+      "outlines": [],
+      "pageposfrom1": 2
+    },
+    {
+      "contents": [
+        "4 0 R"
+      ],
+      "images": [],
+      "label": null,
+      "object": "3 0 R",
+      "outlines": [],
+      "pageposfrom1": 3
+    },
+    {
+      "contents": [
+        "6 0 R"
+      ],
+      "images": [],
+      "label": null,
+      "object": "5 0 R",
+      "outlines": [],
+      "pageposfrom1": 4
+    }
+  ],
+  "parameters": {
+    "decodelevel": "generalized"
+  },
+  "version": 1
+}

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>ChatLSP: Making Language Servers Do More for Statically Contextualizing Large Language Models</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="pdftohtml 0.36"/>
+<meta name="date" content="2024-11-26T05:06:37+00:00"/>
+<meta name="subject" content=""/>
+<style type="text/css">
+<!--
+.xflip {
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: fliph;
+}
+.yflip {
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: flipv;
+}
+.xyflip {
+    -moz-transform: scaleX(-1) scaleY(-1);
+    -webkit-transform: scaleX(-1) scaleY(-1);
+    -o-transform: scaleX(-1) scaleY(-1);
+    transform: scaleX(-1) scaleY(-1);
+    filter: fliph + flipv;
+}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<!-- Page 1 -->
+<a name="1"></a>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:30px;font-family:ZWVGGC+LinLibertineTB;color:#000000;}
+	.ft01{font-size:17px;font-family:AYKBXK+LinLibertineT;color:#000000;}
+	.ft02{font-size:14px;font-family:AYKBXK+LinLibertineT;color:#000000;}
+	.ft03{font-size:17px;font-family:ZWVGGC+LinLibertineTB;color:#000000;}
+	.ft04{font-size:13px;font-family:ZWVGGC+LinLibertineTB;color:#000000;}
+	.ft05{font-size:13px;font-family:AYKBXK+LinLibertineT;color:#000000;}
+	.ft06{font-size:13px;font-family:WFJMPU+LinLibertineTI;color:#000000;}
+	.ft07{font-size:13px;font-family:AYKBXK+LinLibertineT;color:#721679;}
+	.ft08{font-size:13px;font-family:XXWHEJ+LinBiolinumT;color:#155195;}
+	.ft09{font-size:14px;font-family:AYKBXK+LinLibertineT;color:#721679;}
+	.ft010{font-size:11px;font-family:AYKBXK+LinLibertineT;color:#000000;}
+	.ft011{font-size:11px;font-family:WFJMPU+LinLibertineTI;color:#000000;}
+	.ft012{font-size:11px;font-family:XXWHEJ+LinBiolinumT;color:#155195;}
+	.ft013{font-size:14px;font-family:KKDMNC+Inconsolatazi4-Bold;color:#007f00;}
+	.ft014{font-size:14px;font-family:IZYOMP+Inconsolatazi4-Regular;color:#000000;}
+	.ft015{font-size:14px;font-family:IZYOMP+Inconsolatazi4-Regular;color:#666666;}
+	.ft016{font-size:14px;font-family:KKDMNC+Inconsolatazi4-Bold;color:#af003f;}
+	.ft017{font-size:14px;font-family:IZYOMP+Inconsolatazi4-Regular;color:#007f00;}
+	.ft018{font-size:14px;font-family:ZWVGGC+LinLibertineTB;color:#000000;}
+	.ft019{font-size:14px;font-family:WFJMPU+LinLibertineTI;color:#000000;}
+	.ft020{font-size:14px;font-family:URWIFX+txsys;color:#000000;}
+-->
+</style>
+<div id="page1-div" style="position:relative;width:918px;height:1188px;">
+<img width="918" height="1188" src="pdftotext001.png" alt="background image"/>
+<p style="position:absolute;top:108px;left:122px;white-space:nowrap" class="ft00">ChatLSP:&#160;Making&#160;Language&#160;Servers&#160;Do&#160;More&#160;for</p>
+<p style="position:absolute;top:144px;left:108px;white-space:nowrap" class="ft00">Statically&#160;Contextualizing&#160;Large&#160;Language&#160;Models</p>
+<p style="position:absolute;top:187px;left:397px;white-space:nowrap" class="ft01">June&#160;Hyung&#160;Kim</p>
+<p style="position:absolute;top:208px;left:389px;white-space:nowrap" class="ft02">University&#160;of&#160;Michigan</p>
+<p style="position:absolute;top:226px;left:408px;white-space:nowrap" class="ft02">Ann&#160;Arbor,&#160;USA</p>
+<p style="position:absolute;top:257px;left:81px;white-space:nowrap" class="ft03">Abstract</p>
+<p style="position:absolute;top:278px;left:81px;white-space:nowrap" class="ft02">Developer&#160;tooling&#160;is&#160;crucial&#160;for&#160;developer&#160;productivity.&#160;Lan-</p>
+<p style="position:absolute;top:295px;left:81px;white-space:nowrap" class="ft02">guage&#160;Server&#160;Protocol,&#160;in&#160;particular,&#160;allow&#160;language&#160;features</p>
+<p style="position:absolute;top:313px;left:81px;white-space:nowrap" class="ft02">to&#160;be&#160;communicated&#160;to&#160;editors&#160;without&#160;having&#160;to&#160;rely&#160;on</p>
+<p style="position:absolute;top:331px;left:81px;white-space:nowrap" class="ft02">hacky&#160;editor&#160;magic.&#160;However,&#160;current&#160;implementations&#160;of</p>
+<p style="position:absolute;top:349px;left:81px;white-space:nowrap" class="ft02">the&#160;protocol&#160;do&#160;not&#160;adequately&#160;support&#160;the&#160;meteoric&#160;rise&#160;in</p>
+<p style="position:absolute;top:367px;left:81px;white-space:nowrap" class="ft02">demand&#160;for&#160;code&#160;completion&#160;via&#160;LLMs.&#160;LLMs&#160;are&#160;prone&#160;to</p>
+<p style="position:absolute;top:385px;left:81px;white-space:nowrap" class="ft02">hallucination,&#160;and&#160;existing&#160;methods&#160;such&#160;as&#160;exhaustive&#160;re-</p>
+<p style="position:absolute;top:403px;left:81px;white-space:nowrap" class="ft02">trieval&#160;and&#160;RAG&#160;are&#160;limited&#160;by&#160;token&#160;size&#160;and&#160;inconsistency.</p>
+<p style="position:absolute;top:421px;left:80px;white-space:nowrap" class="ft02">Approaching&#160;this&#160;with&#160;a&#160;language&#160;semantics-based&#160;retrieval</p>
+<p style="position:absolute;top:439px;left:81px;white-space:nowrap" class="ft02">can&#160;have&#160;benefits&#160;over&#160;unstructured&#160;approaches,&#160;but&#160;LSP</p>
+<p style="position:absolute;top:457px;left:81px;white-space:nowrap" class="ft02">currently&#160;do&#160;not&#160;expose&#160;an&#160;interface&#160;for&#160;static&#160;retrieval.&#160;We</p>
+<p style="position:absolute;top:475px;left:81px;white-space:nowrap" class="ft02">propose&#160;a&#160;conservative&#160;addendum&#160;to&#160;the&#160;Language&#160;Server</p>
+<p style="position:absolute;top:493px;left:81px;white-space:nowrap" class="ft02">Protocol,&#160;ChatLSP,&#160;to&#160;address&#160;this&#160;issue.</p>
+<p style="position:absolute;top:527px;left:81px;white-space:nowrap" class="ft04">ACM&#160;Reference&#160;Format:</p>
+<p style="position:absolute;top:540px;left:81px;white-space:nowrap" class="ft05">June&#160;Hyung&#160;Kim.&#160;2024.&#160;ChatLSP:&#160;Making&#160;Language&#160;Servers&#160;Do</p>
+<p style="position:absolute;top:556px;left:81px;white-space:nowrap" class="ft05">More&#160;for&#160;Statically&#160;Contextualizing&#160;Large&#160;Language&#160;Models.&#160;In</p>
+<p style="position:absolute;top:560px;left:440px;white-space:nowrap" class="ft06">.</p>
+<p style="position:absolute;top:573px;left:81px;white-space:nowrap" class="ft05">ACM,&#160;New&#160;York,&#160;NY,&#160;USA,</p>
+<p style="position:absolute;top:573px;left:222px;white-space:nowrap" class="ft07"><a href="pdftotext.html#3">3</a></p>
+<p style="position:absolute;top:573px;left:231px;white-space:nowrap" class="ft05">pages.</p>
+<p style="position:absolute;top:576px;left:266px;white-space:nowrap" class="ft08"><a href="https://doi.org/10.1145/nnnnnnn.nnnnnnn">https://doi.org/10.1145/nnnnnnn.</a></p>
+<p style="position:absolute;top:593px;left:81px;white-space:nowrap" class="ft08"><a href="https://doi.org/10.1145/nnnnnnn.nnnnnnn">nnnnnnn</a></p>
+<p style="position:absolute;top:636px;left:81px;white-space:nowrap" class="ft03">1</p>
+<p style="position:absolute;top:636px;left:108px;white-space:nowrap" class="ft03">Introduction&#160;and&#160;Background</p>
+<p style="position:absolute;top:657px;left:81px;white-space:nowrap" class="ft02">One&#160;of&#160;the&#160;biggest&#160;advancements&#160;in&#160;the&#160;tooling&#160;ecosystem&#160;is</p>
+<p style="position:absolute;top:675px;left:81px;white-space:nowrap" class="ft02">the&#160;Language&#160;Server&#160;Protocol&#160;<a href="pdftotext.html#3">[</a></p>
+<p style="position:absolute;top:675px;left:271px;white-space:nowrap" class="ft09"><a href="pdftotext.html#3">8</a></p>
+<p style="position:absolute;top:675px;left:278px;white-space:nowrap" class="ft02"><a href="pdftotext.html#3">],&#160;</a>which&#160;provides&#160;a&#160;unified</p>
+<p style="position:absolute;top:692px;left:81px;white-space:nowrap" class="ft02">interface&#160;for&#160;linking&#160;language&#160;and&#160;editor&#160;features.&#160;Recently,</p>
+<p style="position:absolute;top:710px;left:80px;white-space:nowrap" class="ft02">we’ve&#160;seen&#160;an&#160;explosion&#160;at&#160;the&#160;juncture&#160;of&#160;editor&#160;tooling&#160;and</p>
+<p style="position:absolute;top:728px;left:80px;white-space:nowrap" class="ft02">AI,&#160;with&#160;GitHub&#160;Copilot&#160;<a href="pdftotext.html#3">[</a></p>
+<p style="position:absolute;top:728px;left:240px;white-space:nowrap" class="ft09"><a href="pdftotext.html#3">3</a></p>
+<p style="position:absolute;top:728px;left:247px;white-space:nowrap" class="ft02"><a href="pdftotext.html#3">]&#160;</a>leading&#160;the&#160;charge,&#160;promising</p>
+<p style="position:absolute;top:746px;left:81px;white-space:nowrap" class="ft02">to&#160;help&#160;developers.&#160;However,&#160;these&#160;AI&#160;tools&#160;are&#160;also&#160;prone</p>
+<p style="position:absolute;top:764px;left:81px;white-space:nowrap" class="ft02">to&#160;hallucination,&#160;suggesting&#160;statically&#160;incorrect&#160;code&#160;or&#160;stati-</p>
+<p style="position:absolute;top:782px;left:81px;white-space:nowrap" class="ft02">cally&#160;correct&#160;code&#160;that&#160;exhibits&#160;runtime&#160;errors.&#160;Ameliorating</p>
+<p style="position:absolute;top:800px;left:81px;white-space:nowrap" class="ft02">these&#160;negative&#160;effects&#160;can&#160;be&#160;done&#160;by&#160;feeding&#160;the&#160;LLM&#160;more</p>
+<p style="position:absolute;top:818px;left:81px;white-space:nowrap" class="ft02">information&#160;about&#160;the&#160;codebase.&#160;Because&#160;costs&#160;increase&#160;with</p>
+<p style="position:absolute;top:836px;left:81px;white-space:nowrap" class="ft02">token&#160;count&#160;<a href="pdftotext.html#3">[</a></p>
+<p style="position:absolute;top:836px;left:163px;white-space:nowrap" class="ft09"><a href="pdftotext.html#3">2</a></p>
+<p style="position:absolute;top:836px;left:170px;white-space:nowrap" class="ft02"><a href="pdftotext.html#3">,</a></p>
+<p style="position:absolute;top:836px;left:177px;white-space:nowrap" class="ft09"><a href="pdftotext.html#3">6</a></p>
+<p style="position:absolute;top:836px;left:184px;white-space:nowrap" class="ft02"><a href="pdftotext.html#3">],&#160;</a>methods&#160;such&#160;as&#160;RAG&#160;<a href="pdftotext.html#3">[</a></p>
+<p style="position:absolute;top:836px;left:338px;white-space:nowrap" class="ft09"><a href="pdftotext.html#3">4</a></p>
+<p style="position:absolute;top:836px;left:345px;white-space:nowrap" class="ft02"><a href="pdftotext.html#3">]&#160;</a>are&#160;commonly</p>
+<p style="position:absolute;top:880px;left:81px;white-space:nowrap" class="ft010">Permission&#160;to&#160;make&#160;digital&#160;or&#160;hard&#160;copies&#160;of&#160;all&#160;or&#160;part&#160;of&#160;this&#160;work&#160;for</p>
+<p style="position:absolute;top:895px;left:81px;white-space:nowrap" class="ft010">personal&#160;or&#160;classroom&#160;use&#160;is&#160;granted&#160;without&#160;fee&#160;provided&#160;that&#160;copies</p>
+<p style="position:absolute;top:910px;left:81px;white-space:nowrap" class="ft010">are&#160;not&#160;made&#160;or&#160;distributed&#160;for&#160;profit&#160;or&#160;commercial&#160;advantage&#160;and&#160;that</p>
+<p style="position:absolute;top:925px;left:81px;white-space:nowrap" class="ft010">copies&#160;bear&#160;this&#160;notice&#160;and&#160;the&#160;full&#160;citation&#160;on&#160;the&#160;first&#160;page.&#160;Copyrights</p>
+<p style="position:absolute;top:939px;left:81px;white-space:nowrap" class="ft010">for&#160;components&#160;of&#160;this&#160;work&#160;owned&#160;by&#160;others&#160;than&#160;the&#160;author(s)&#160;must</p>
+<p style="position:absolute;top:954px;left:81px;white-space:nowrap" class="ft010">be&#160;honored.&#160;Abstracting&#160;with&#160;credit&#160;is&#160;permitted.&#160;To&#160;copy&#160;otherwise,&#160;or</p>
+<p style="position:absolute;top:969px;left:81px;white-space:nowrap" class="ft010">republish,&#160;to&#160;post&#160;on&#160;servers&#160;or&#160;to&#160;redistribute&#160;to&#160;lists,&#160;requires&#160;prior&#160;specific</p>
+<p style="position:absolute;top:984px;left:81px;white-space:nowrap" class="ft010">permission&#160;and/or&#160;a&#160;fee.&#160;Request&#160;permissions&#160;from&#160;permissions@acm.org.</p>
+<p style="position:absolute;top:1004px;left:81px;white-space:nowrap" class="ft011">Conference’17,&#160;July&#160;2017,&#160;Washington,&#160;DC,&#160;USA</p>
+<p style="position:absolute;top:1017px;left:80px;white-space:nowrap" class="ft010">©&#160;2024&#160;Copyright&#160;held&#160;by&#160;the&#160;owner/author(s).&#160;Publication&#160;rights&#160;licensed</p>
+<p style="position:absolute;top:1032px;left:81px;white-space:nowrap" class="ft010">to&#160;ACM.</p>
+<p style="position:absolute;top:1047px;left:81px;white-space:nowrap" class="ft010">ACM&#160;ISBN&#160;978-x-xxxx-xxxx-x/YY/MM</p>
+<p style="position:absolute;top:1065px;left:81px;white-space:nowrap" class="ft012"><a href="https://doi.org/10.1145/nnnnnnn.nnnnnnn">https://doi.org/10.1145/nnnnnnn.nnnnnnn</a></p>
+<p style="position:absolute;top:255px;left:477px;white-space:nowrap" class="ft02">used.&#160;This&#160;is&#160;not&#160;ideal,&#160;though,&#160;as&#160;it&#160;only&#160;grabs&#160;seemingly&#160;rel-</p>
+<p style="position:absolute;top:273px;left:477px;white-space:nowrap" class="ft02">evant&#160;tokens&#160;based&#160;on&#160;imperfect&#160;heuristics.&#160;Treating&#160;code&#160;as</p>
+<p style="position:absolute;top:291px;left:477px;white-space:nowrap" class="ft02">more&#160;than&#160;mere&#160;tokens&#160;by&#160;using&#160;static&#160;retrieval&#160;cleanly&#160;links</p>
+<p style="position:absolute;top:309px;left:477px;white-space:nowrap" class="ft02">the&#160;completion&#160;site&#160;to&#160;type&#160;and&#160;value&#160;definitions&#160;elsewhere</p>
+<p style="position:absolute;top:327px;left:477px;white-space:nowrap" class="ft02">in&#160;the&#160;codebase&#160;<a href="pdftotext.html#3">[</a></p>
+<p style="position:absolute;top:327px;left:580px;white-space:nowrap" class="ft09"><a href="pdftotext.html#3">1</a></p>
+<p style="position:absolute;top:327px;left:587px;white-space:nowrap" class="ft02"><a href="pdftotext.html#3">].</a></p>
+<p style="position:absolute;top:345px;left:492px;white-space:nowrap" class="ft02">We&#160;define&#160;static&#160;retrieval&#160;as&#160;the&#160;action&#160;of&#160;retrieving&#160;ex-</p>
+<p style="position:absolute;top:363px;left:477px;white-space:nowrap" class="ft02">pected&#160;types,&#160;relevant&#160;types,&#160;and&#160;relevant&#160;headers.</p>
+<p style="position:absolute;top:403px;left:507px;white-space:nowrap" class="ft013"><b>type</b></p>
+<p style="position:absolute;top:403px;left:544px;white-space:nowrap" class="ft014">Amount</p>
+<p style="position:absolute;top:403px;left:596px;white-space:nowrap" class="ft015">=</p>
+<p style="position:absolute;top:403px;left:611px;white-space:nowrap" class="ft016"><b>number</b></p>
+<p style="position:absolute;top:403px;left:656px;white-space:nowrap" class="ft014">;</p>
+<p style="position:absolute;top:421px;left:507px;white-space:nowrap" class="ft013"><b>type</b></p>
+<p style="position:absolute;top:421px;left:544px;white-space:nowrap" class="ft014">Currency</p>
+<p style="position:absolute;top:421px;left:611px;white-space:nowrap" class="ft015">=</p>
+<p style="position:absolute;top:421px;left:626px;white-space:nowrap" class="ft014">Dollar</p>
+<p style="position:absolute;top:421px;left:679px;white-space:nowrap" class="ft015">|</p>
+<p style="position:absolute;top:421px;left:694px;white-space:nowrap" class="ft014">Euro;</p>
+<p style="position:absolute;top:439px;left:507px;white-space:nowrap" class="ft013"><b>type</b></p>
+<p style="position:absolute;top:439px;left:544px;white-space:nowrap" class="ft014">Transaction</p>
+<p style="position:absolute;top:439px;left:634px;white-space:nowrap" class="ft015">=</p>
+<p style="position:absolute;top:439px;left:649px;white-space:nowrap" class="ft014">[Amount,&#160;Currency];</p>
+<p style="position:absolute;top:457px;left:507px;white-space:nowrap" class="ft013"><b>const</b></p>
+<p style="position:absolute;top:457px;left:552px;white-space:nowrap" class="ft014">createAmount</p>
+<p style="position:absolute;top:457px;left:649px;white-space:nowrap" class="ft015">=</p>
+<p style="position:absolute;top:457px;left:664px;white-space:nowrap" class="ft014">(n</p>
+<p style="position:absolute;top:457px;left:679px;white-space:nowrap" class="ft015">:</p>
+<p style="position:absolute;top:457px;left:694px;white-space:nowrap" class="ft016"><b>number</b></p>
+<p style="position:absolute;top:457px;left:738px;white-space:nowrap" class="ft014">)</p>
+<p style="position:absolute;top:457px;left:746px;white-space:nowrap" class="ft015">:</p>
+<p style="position:absolute;top:457px;left:761px;white-space:nowrap" class="ft014">Amount&#160;=&gt;&#160;{</p>
+<p style="position:absolute;top:475px;left:537px;white-space:nowrap" class="ft013"><b>return</b></p>
+<p style="position:absolute;top:475px;left:589px;white-space:nowrap" class="ft017">Math</p>
+<p style="position:absolute;top:475px;left:619px;white-space:nowrap" class="ft014">.round(n</p>
+<p style="position:absolute;top:475px;left:686px;white-space:nowrap" class="ft015">*&#160;100</p>
+<p style="position:absolute;top:475px;left:724px;white-space:nowrap" class="ft014">)</p>
+<p style="position:absolute;top:475px;left:738px;white-space:nowrap" class="ft015">/&#160;100</p>
+<p style="position:absolute;top:475px;left:776px;white-space:nowrap" class="ft014">;</p>
+<p style="position:absolute;top:493px;left:507px;white-space:nowrap" class="ft014">}</p>
+<p style="position:absolute;top:511px;left:507px;white-space:nowrap" class="ft013"><b>const</b></p>
+<p style="position:absolute;top:511px;left:552px;white-space:nowrap" class="ft014">withdraw</p>
+<p style="position:absolute;top:511px;left:619px;white-space:nowrap" class="ft015">=</p>
+<p style="position:absolute;top:511px;left:634px;white-space:nowrap" class="ft014">(n</p>
+<p style="position:absolute;top:511px;left:649px;white-space:nowrap" class="ft015">:</p>
+<p style="position:absolute;top:511px;left:664px;white-space:nowrap" class="ft016"><b>number</b></p>
+<p style="position:absolute;top:511px;left:709px;white-space:nowrap" class="ft014">)</p>
+<p style="position:absolute;top:511px;left:716px;white-space:nowrap" class="ft015">:</p>
+<p style="position:absolute;top:511px;left:731px;white-space:nowrap" class="ft014">Transaction&#160;=&gt;</p>
+<p style="position:absolute;top:511px;left:843px;white-space:nowrap" class="ft015">??</p>
+<p style="position:absolute;top:546px;left:536px;white-space:nowrap" class="ft018">Figure&#160;1.</p>
+<p style="position:absolute;top:543px;left:598px;white-space:nowrap" class="ft02">Example&#160;TypeScript&#160;Program</p>
+<p style="position:absolute;top:582px;left:492px;white-space:nowrap" class="ft02">Fig.</p>
+<p style="position:absolute;top:582px;left:518px;white-space:nowrap" class="ft09"><a href="pdftotext.html#1">1</a></p>
+<p style="position:absolute;top:582px;left:528px;white-space:nowrap" class="ft02">shows&#160;an&#160;example&#160;TypeScript&#160;Program&#160;for&#160;demon-</p>
+<p style="position:absolute;top:600px;left:477px;white-space:nowrap" class="ft02">stration&#160;purposes.&#160;The</p>
+<p style="position:absolute;top:604px;left:615px;white-space:nowrap" class="ft019">??</p>
+<p style="position:absolute;top:600px;left:632px;white-space:nowrap" class="ft02">represents&#160;a&#160;typed&#160;hole,&#160;an&#160;incom-</p>
+<p style="position:absolute;top:618px;left:477px;white-space:nowrap" class="ft02">plete&#160;portion&#160;of&#160;the&#160;code.&#160;Similar&#160;concepts&#160;exist&#160;in&#160;languages</p>
+<p style="position:absolute;top:636px;left:477px;white-space:nowrap" class="ft02">such&#160;as&#160;Agda&#160;<a href="pdftotext.html#3">[</a></p>
+<p style="position:absolute;top:636px;left:566px;white-space:nowrap" class="ft09"><a href="pdftotext.html#3">9</a></p>
+<p style="position:absolute;top:636px;left:573px;white-space:nowrap" class="ft02"><a href="pdftotext.html#3">]&#160;</a>or&#160;Haskell&#160;<a href="pdftotext.html#3">[</a></p>
+<p style="position:absolute;top:636px;left:654px;white-space:nowrap" class="ft09"><a href="pdftotext.html#3">10</a></p>
+<p style="position:absolute;top:636px;left:668px;white-space:nowrap" class="ft02"><a href="pdftotext.html#3">].</a></p>
+<p style="position:absolute;top:654px;left:492px;white-space:nowrap" class="ft02">An&#160;expected&#160;type&#160;is&#160;the&#160;type&#160;of&#160;the&#160;hole.&#160;In&#160;Fig.</p>
+<p style="position:absolute;top:654px;left:802px;white-space:nowrap" class="ft09"><a href="pdftotext.html#1">1</a></p>
+<p style="position:absolute;top:654px;left:809px;white-space:nowrap" class="ft02"><a href="pdftotext.html#1">,&#160;</a>the</p>
+<p style="position:absolute;top:672px;left:477px;white-space:nowrap" class="ft02">expected&#160;type&#160;is</p>
+<p style="position:absolute;top:675px;left:577px;white-space:nowrap" class="ft019">type&#160;withdraw&#160;=&#160;(n:&#160;number)&#160;=&gt;&#160;Transaction</p>
+<p style="position:absolute;top:672px;left:836px;white-space:nowrap" class="ft02">.</p>
+<p style="position:absolute;top:690px;left:477px;white-space:nowrap" class="ft02">Relevant&#160;types&#160;is&#160;the&#160;list&#160;of&#160;types&#160;that&#160;may&#160;be&#160;related&#160;in&#160;any</p>
+<p style="position:absolute;top:707px;left:476px;white-space:nowrap" class="ft02">way&#160;to&#160;the&#160;expected&#160;type.&#160;The&#160;expected&#160;type&#160;can&#160;comprise</p>
+<p style="position:absolute;top:725px;left:477px;white-space:nowrap" class="ft02">components&#160;that&#160;refer&#160;to&#160;other&#160;types,&#160;so&#160;we&#160;retrieve&#160;those</p>
+<p style="position:absolute;top:743px;left:477px;white-space:nowrap" class="ft02">references.&#160;In&#160;Fig.</p>
+<p style="position:absolute;top:743px;left:589px;white-space:nowrap" class="ft09"><a href="pdftotext.html#1">1</a></p>
+<p style="position:absolute;top:743px;left:596px;white-space:nowrap" class="ft02"><a href="pdftotext.html#1">,&#160;</a>the&#160;relevant&#160;types&#160;are&#160;the&#160;following:</p>
+<p style="position:absolute;top:769px;left:500px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:769px;left:514px;white-space:nowrap" class="ft019">type&#160;withdraw&#160;=&#160;(n:&#160;number)&#160;=&gt;&#160;Transaction</p>
+<p style="position:absolute;top:786px;left:500px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:787px;left:514px;white-space:nowrap" class="ft019">type&#160;Transaction&#160;=&#160;[Amount,&#160;Currency]</p>
+<p style="position:absolute;top:804px;left:500px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:805px;left:514px;white-space:nowrap" class="ft019">type&#160;Amount&#160;=&#160;number</p>
+<p style="position:absolute;top:822px;left:500px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:823px;left:514px;white-space:nowrap" class="ft019">type&#160;Currency&#160;=&#160;Dollar&#160;|&#160;Euro</p>
+<p style="position:absolute;top:840px;left:500px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:837px;left:513px;white-space:nowrap" class="ft02">Types&#160;that</p>
+<p style="position:absolute;top:840px;left:581px;white-space:nowrap" class="ft019">Dollar</p>
+<p style="position:absolute;top:837px;left:623px;white-space:nowrap" class="ft02">and</p>
+<p style="position:absolute;top:840px;left:649px;white-space:nowrap" class="ft019">Euro</p>
+<p style="position:absolute;top:837px;left:681px;white-space:nowrap" class="ft02">refer&#160;to.</p>
+<p style="position:absolute;top:858px;left:477px;white-space:nowrap" class="ft02">Relevant&#160;headers&#160;is&#160;the&#160;list&#160;of&#160;functions&#160;that&#160;we&#160;can&#160;call&#160;to</p>
+<p style="position:absolute;top:876px;left:477px;white-space:nowrap" class="ft02">return&#160;the&#160;expected&#160;type,&#160;or&#160;parts&#160;of&#160;it.&#160;In&#160;Fig.</p>
+<p style="position:absolute;top:876px;left:770px;white-space:nowrap" class="ft09"><a href="pdftotext.html#1">1</a></p>
+<p style="position:absolute;top:876px;left:778px;white-space:nowrap" class="ft02"><a href="pdftotext.html#1">,&#160;</a>the&#160;only</p>
+<p style="position:absolute;top:894px;left:477px;white-space:nowrap" class="ft02">relevant&#160;header&#160;is</p>
+<p style="position:absolute;top:898px;left:589px;white-space:nowrap" class="ft019">createAmount</p>
+<p style="position:absolute;top:894px;left:671px;white-space:nowrap" class="ft02">.</p>
+<p style="position:absolute;top:912px;left:492px;white-space:nowrap" class="ft02">Determining&#160;what&#160;headers&#160;are&#160;relevant&#160;can&#160;be&#160;done&#160;through</p>
+<p style="position:absolute;top:930px;left:477px;white-space:nowrap" class="ft02">two&#160;steps:&#160;generating&#160;a&#160;list&#160;of&#160;target&#160;types,&#160;and&#160;finding&#160;head-</p>
+<p style="position:absolute;top:948px;left:477px;white-space:nowrap" class="ft02">ers&#160;whose&#160;types&#160;are&#160;consistent&#160;with&#160;any&#160;of&#160;the&#160;target&#160;types.</p>
+<p style="position:absolute;top:966px;left:477px;white-space:nowrap" class="ft02">Criteria&#160;for&#160;target&#160;types&#160;are&#160;as&#160;follows:</p>
+<p style="position:absolute;top:991px;left:500px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:987px;left:513px;white-space:nowrap" class="ft02">The&#160;type&#160;of&#160;the&#160;hole&#160;itself.</p>
+<p style="position:absolute;top:1009px;left:500px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:1005px;left:514px;white-space:nowrap" class="ft02">If&#160;the&#160;hole&#160;is&#160;an&#160;arrow&#160;type,&#160;the&#160;return&#160;type.</p>
+<p style="position:absolute;top:1027px;left:500px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:1023px;left:514px;white-space:nowrap" class="ft02">If&#160;the&#160;hole&#160;is&#160;a&#160;product&#160;type,&#160;the&#160;component&#160;types.</p>
+<p style="position:absolute;top:1045px;left:500px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:1041px;left:514px;white-space:nowrap" class="ft02">Compound&#160;type&#160;definitions&#160;(cases&#160;where&#160;the&#160;return</p>
+<p style="position:absolute;top:1059px;left:514px;white-space:nowrap" class="ft02">type&#160;is&#160;a&#160;product&#160;or&#160;a&#160;product&#160;has&#160;an&#160;arrow&#160;type).</p>
+</div>
+<!-- Page 2 -->
+<a name="2"></a>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft021{font-size:11px;font-family:XXWHEJ+LinBiolinumT;color:#000000;}
+-->
+</style>
+<div id="page2-div" style="position:relative;width:918px;height:1188px;">
+<img width="918" height="1188" src="pdftotext002.png" alt="background image"/>
+<p style="position:absolute;top:74px;left:81px;white-space:nowrap" class="ft021">Conference’17,&#160;July&#160;2017,&#160;Washington,&#160;DC,&#160;USA</p>
+<p style="position:absolute;top:74px;left:790px;white-space:nowrap" class="ft021">Kim&#160;et&#160;al.</p>
+<p style="position:absolute;top:109px;left:81px;white-space:nowrap" class="ft02">There&#160;are&#160;many&#160;ways&#160;to&#160;determine&#160;type&#160;consistency,&#160;as</p>
+<p style="position:absolute;top:127px;left:81px;white-space:nowrap" class="ft02">this&#160;depends&#160;on&#160;the&#160;language&#160;implementation.&#160;One&#160;example</p>
+<p style="position:absolute;top:145px;left:80px;white-space:nowrap" class="ft02">would&#160;be&#160;to&#160;use&#160;a&#160;checker&#160;function</p>
+<p style="position:absolute;top:148px;left:292px;white-space:nowrap" class="ft019">const&#160;checker&#160;=&#160;(h:&#160;HTyp):</p>
+<p style="position:absolute;top:166px;left:81px;white-space:nowrap" class="ft019">TTyp&#160;=&gt;&#160;return&#160;h</p>
+<p style="position:absolute;top:163px;left:184px;white-space:nowrap" class="ft02">,&#160;and&#160;check&#160;that&#160;substituting</p>
+<p style="position:absolute;top:166px;left:363px;white-space:nowrap" class="ft019">HTyp</p>
+<p style="position:absolute;top:163px;left:400px;white-space:nowrap" class="ft02">for&#160;the</p>
+<p style="position:absolute;top:180px;left:81px;white-space:nowrap" class="ft02">header’s&#160;type&#160;and</p>
+<p style="position:absolute;top:184px;left:191px;white-space:nowrap" class="ft019">TTyp</p>
+<p style="position:absolute;top:180px;left:226px;white-space:nowrap" class="ft02">for&#160;the&#160;target’s&#160;type&#160;does&#160;not&#160;return</p>
+<p style="position:absolute;top:198px;left:81px;white-space:nowrap" class="ft02">a&#160;static&#160;error&#160;when&#160;compiled.</p>
+<p style="position:absolute;top:239px;left:81px;white-space:nowrap" class="ft03">2</p>
+<p style="position:absolute;top:239px;left:108px;white-space:nowrap" class="ft03">Limitations&#160;of&#160;Modern&#160;Developer&#160;Tooling</p>
+<p style="position:absolute;top:260px;left:81px;white-space:nowrap" class="ft02">Current&#160;implementations&#160;of&#160;developer&#160;tooling&#160;such&#160;as&#160;LSPs</p>
+<p style="position:absolute;top:278px;left:81px;white-space:nowrap" class="ft02">and&#160;static&#160;analysis&#160;tools&#160;do&#160;not&#160;operate&#160;at&#160;a&#160;granular&#160;type-</p>
+<p style="position:absolute;top:296px;left:81px;white-space:nowrap" class="ft02">based&#160;level&#160;capable&#160;of&#160;the&#160;aforementioned&#160;static&#160;retrieval.</p>
+<p style="position:absolute;top:336px;left:81px;white-space:nowrap" class="ft018">2.1</p>
+<p style="position:absolute;top:336px;left:115px;white-space:nowrap" class="ft018">Limitations&#160;of&#160;the&#160;Language&#160;Server&#160;Protocol</p>
+<p style="position:absolute;top:355px;left:81px;white-space:nowrap" class="ft02">Language&#160;servers&#160;are&#160;capable&#160;of&#160;retrieving&#160;static&#160;information</p>
+<p style="position:absolute;top:373px;left:81px;white-space:nowrap" class="ft02">from&#160;a&#160;codebase.&#160;Particularly,&#160;modern&#160;language&#160;servers&#160;often</p>
+<p style="position:absolute;top:391px;left:81px;white-space:nowrap" class="ft02">have&#160;the&#160;ability&#160;to&#160;retrieve&#160;the&#160;expected&#160;type&#160;of&#160;an&#160;expres-</p>
+<p style="position:absolute;top:409px;left:81px;white-space:nowrap" class="ft02">sion,&#160;the&#160;relevant&#160;types,&#160;and&#160;the&#160;relevant&#160;function&#160;headers.</p>
+<p style="position:absolute;top:427px;left:81px;white-space:nowrap" class="ft02">However,&#160;the&#160;current&#160;Language&#160;Server&#160;Protocol&#160;<a href="pdftotext.html#3">[</a></p>
+<p style="position:absolute;top:427px;left:375px;white-space:nowrap" class="ft09"><a href="pdftotext.html#3">7</a></p>
+<p style="position:absolute;top:427px;left:381px;white-space:nowrap" class="ft02"><a href="pdftotext.html#3">]&#160;</a>does&#160;not</p>
+<p style="position:absolute;top:445px;left:81px;white-space:nowrap" class="ft02">provide&#160;an&#160;interface&#160;to&#160;capitalize&#160;on&#160;this.&#160;Because&#160;of&#160;this,</p>
+<p style="position:absolute;top:463px;left:81px;white-space:nowrap" class="ft02">static&#160;retrieval&#160;must&#160;be&#160;done&#160;by&#160;hacking&#160;together&#160;different</p>
+<p style="position:absolute;top:481px;left:81px;white-space:nowrap" class="ft02">LSP&#160;methods&#160;in&#160;a&#160;recursive&#160;algorithm.</p>
+<p style="position:absolute;top:511px;left:104px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:507px;left:118px;white-space:nowrap" class="ft02">Get&#160;the&#160;current&#160;cursor&#160;location.</p>
+<p style="position:absolute;top:529px;left:104px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:525px;left:118px;white-space:nowrap" class="ft02">Get&#160;the&#160;enclosing&#160;declaration.</p>
+<p style="position:absolute;top:547px;left:104px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:543px;left:118px;white-space:nowrap" class="ft02">Get&#160;the&#160;type&#160;of&#160;the&#160;expression&#160;inside.</p>
+<p style="position:absolute;top:565px;left:104px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:561px;left:118px;white-space:nowrap" class="ft02">Step&#160;into&#160;the&#160;expression’s&#160;component&#160;types,&#160;and&#160;re-</p>
+<p style="position:absolute;top:579px;left:118px;white-space:nowrap" class="ft02">curse.&#160;For&#160;example,&#160;in&#160;Fig.</p>
+<p style="position:absolute;top:579px;left:279px;white-space:nowrap" class="ft09"><a href="pdftotext.html#1">1</a></p>
+<p style="position:absolute;top:579px;left:285px;white-space:nowrap" class="ft02"><a href="pdftotext.html#1">,&#160;</a>if&#160;the&#160;expression&#160;at&#160;hand</p>
+<p style="position:absolute;top:597px;left:118px;white-space:nowrap" class="ft02">is</p>
+<p style="position:absolute;top:601px;left:131px;white-space:nowrap" class="ft019">Currency</p>
+<p style="position:absolute;top:597px;left:186px;white-space:nowrap" class="ft02">,&#160;recurse&#160;on</p>
+<p style="position:absolute;top:601px;left:261px;white-space:nowrap" class="ft019">Dollar</p>
+<p style="position:absolute;top:597px;left:303px;white-space:nowrap" class="ft02">and</p>
+<p style="position:absolute;top:601px;left:329px;white-space:nowrap" class="ft019">Euro</p>
+<p style="position:absolute;top:597px;left:356px;white-space:nowrap" class="ft02">.</p>
+<p style="position:absolute;top:624px;left:81px;white-space:nowrap" class="ft02">Clients&#160;can&#160;request&#160;one&#160;specific&#160;method,&#160;but&#160;cannot&#160;request</p>
+<p style="position:absolute;top:642px;left:81px;white-space:nowrap" class="ft02">for&#160;a&#160;series&#160;of&#160;methods&#160;in&#160;a&#160;programmatic&#160;manner.&#160;Such</p>
+<p style="position:absolute;top:659px;left:81px;white-space:nowrap" class="ft02">action&#160;would&#160;require&#160;a&#160;custom&#160;method&#160;that&#160;the&#160;client&#160;can</p>
+<p style="position:absolute;top:677px;left:81px;white-space:nowrap" class="ft02">call&#160;once,&#160;and&#160;the&#160;language&#160;server&#160;to&#160;execute&#160;the&#160;tasks.&#160;Our</p>
+<p style="position:absolute;top:695px;left:81px;white-space:nowrap" class="ft02">research&#160;showed&#160;that&#160;type&#160;and&#160;header&#160;extraction&#160;is&#160;not&#160;im-</p>
+<p style="position:absolute;top:713px;left:81px;white-space:nowrap" class="ft02">plemented&#160;yet.&#160;Given&#160;the&#160;importance&#160;of&#160;extracting&#160;static</p>
+<p style="position:absolute;top:731px;left:81px;white-space:nowrap" class="ft02">information&#160;and&#160;the&#160;capabilities&#160;of&#160;language&#160;servers,&#160;we&#160;be-</p>
+<p style="position:absolute;top:749px;left:81px;white-space:nowrap" class="ft02">lieve&#160;that&#160;this&#160;is&#160;a&#160;missed&#160;opportunity.</p>
+<p style="position:absolute;top:789px;left:81px;white-space:nowrap" class="ft018">2.2</p>
+<p style="position:absolute;top:789px;left:115px;white-space:nowrap" class="ft018">Limitations&#160;of&#160;Other&#160;Static&#160;Analysis&#160;Tools</p>
+<p style="position:absolute;top:808px;left:80px;white-space:nowrap" class="ft02">Another&#160;popular&#160;static&#160;analysis&#160;tool&#160;is&#160;CodeQL&#160;<a href="pdftotext.html#3">[</a></p>
+<p style="position:absolute;top:808px;left:364px;white-space:nowrap" class="ft09"><a href="pdftotext.html#3">5</a></p>
+<p style="position:absolute;top:808px;left:371px;white-space:nowrap" class="ft02"><a href="pdftotext.html#3">]&#160;</a>by&#160;GitHub.</p>
+<p style="position:absolute;top:826px;left:81px;white-space:nowrap" class="ft02">CodeQL&#160;first&#160;generates&#160;a&#160;database&#160;over&#160;a&#160;repository,&#160;then</p>
+<p style="position:absolute;top:844px;left:81px;white-space:nowrap" class="ft02">gives&#160;the&#160;developers&#160;the&#160;ability&#160;to&#160;write&#160;queries&#160;on&#160;specific</p>
+<p style="position:absolute;top:862px;left:81px;white-space:nowrap" class="ft02">elements,&#160;AST&#160;nodes,&#160;and&#160;more.&#160;In&#160;principle&#160;this&#160;is&#160;the&#160;ideal</p>
+<p style="position:absolute;top:880px;left:80px;white-space:nowrap" class="ft02">way&#160;to&#160;extract&#160;information.&#160;Code,&#160;by&#160;definition,&#160;is&#160;more</p>
+<p style="position:absolute;top:898px;left:81px;white-space:nowrap" class="ft02">than&#160;just&#160;text&#160;and&#160;cursor&#160;positions&#160;-&#160;it&#160;is&#160;semantic&#160;data,&#160;and</p>
+<p style="position:absolute;top:916px;left:81px;white-space:nowrap" class="ft02">querying&#160;for&#160;specific&#160;data&#160;inherently&#160;makes&#160;sense.</p>
+<p style="position:absolute;top:934px;left:96px;white-space:nowrap" class="ft02">CodeQL,&#160;however,&#160;is&#160;not&#160;without&#160;its&#160;flaws.&#160;The&#160;database</p>
+<p style="position:absolute;top:952px;left:81px;white-space:nowrap" class="ft02">is&#160;created&#160;over&#160;a&#160;snapshot&#160;of&#160;the&#160;codebase,&#160;so&#160;it&#160;does&#160;not</p>
+<p style="position:absolute;top:970px;left:81px;white-space:nowrap" class="ft02">incrementally&#160;expand&#160;with&#160;the&#160;addition&#160;of&#160;new&#160;code&#160;-&#160;it&#160;must</p>
+<p style="position:absolute;top:987px;left:81px;white-space:nowrap" class="ft02">be&#160;re-created&#160;every&#160;time&#160;a&#160;new&#160;change&#160;occurs.&#160;Furthermore,</p>
+<p style="position:absolute;top:1005px;left:81px;white-space:nowrap" class="ft02">the&#160;overhead&#160;is&#160;non-negligible&#160;-&#160;creating&#160;a&#160;database&#160;takes</p>
+<p style="position:absolute;top:1023px;left:81px;white-space:nowrap" class="ft02">a&#160;considerable&#160;amount&#160;of&#160;time,&#160;and&#160;developers&#160;must&#160;also</p>
+<p style="position:absolute;top:1041px;left:80px;white-space:nowrap" class="ft02">write&#160;separate&#160;queries&#160;in&#160;CodeQL’s&#160;own&#160;domain-specific</p>
+<p style="position:absolute;top:1059px;left:81px;white-space:nowrap" class="ft02">language&#160;QL.&#160;We&#160;believe&#160;that&#160;developers&#160;should&#160;be&#160;able&#160;to</p>
+<p style="position:absolute;top:109px;left:477px;white-space:nowrap" class="ft02">do&#160;relatively&#160;simple&#160;things&#160;such&#160;as&#160;static&#160;retrieval&#160;without</p>
+<p style="position:absolute;top:127px;left:476px;white-space:nowrap" class="ft02">writing&#160;complicated&#160;queries.</p>
+<p style="position:absolute;top:164px;left:477px;white-space:nowrap" class="ft03">3</p>
+<p style="position:absolute;top:164px;left:504px;white-space:nowrap" class="ft03">Extending&#160;the&#160;Protocol</p>
+<p style="position:absolute;top:185px;left:476px;white-space:nowrap" class="ft02">An&#160;ideal&#160;system&#160;should&#160;have&#160;the&#160;the&#160;following&#160;qualities:</p>
+<p style="position:absolute;top:212px;left:500px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:209px;left:514px;white-space:nowrap" class="ft02">Extract&#160;static&#160;information,&#160;particularly&#160;the&#160;expected</p>
+<p style="position:absolute;top:227px;left:514px;white-space:nowrap" class="ft02">type,&#160;relevant&#160;types,&#160;and&#160;relevant&#160;headers.</p>
+<p style="position:absolute;top:248px;left:500px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:244px;left:514px;white-space:nowrap" class="ft02">Fast,&#160;actions&#160;should&#160;be&#160;completed&#160;in&#160;milliseconds.</p>
+<p style="position:absolute;top:266px;left:500px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:262px;left:514px;white-space:nowrap" class="ft02">Easy&#160;to&#160;use,&#160;and&#160;developers&#160;who&#160;use&#160;an&#160;editor&#160;should</p>
+<p style="position:absolute;top:280px;left:514px;white-space:nowrap" class="ft02">not&#160;have&#160;to&#160;learn&#160;thrid-party&#160;tools&#160;to&#160;reap&#160;the&#160;benefits</p>
+<p style="position:absolute;top:298px;left:514px;white-space:nowrap" class="ft02">of&#160;static&#160;retrieval.</p>
+<p style="position:absolute;top:320px;left:500px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:316px;left:514px;white-space:nowrap" class="ft02">React&#160;to&#160;future&#160;code&#160;changes.</p>
+<p style="position:absolute;top:339px;left:492px;white-space:nowrap" class="ft02">Given&#160;these&#160;limitations,&#160;many&#160;third-party&#160;static&#160;analysis</p>
+<p style="position:absolute;top:357px;left:477px;white-space:nowrap" class="ft02">tools&#160;are&#160;out&#160;of&#160;question.&#160;Language&#160;servers&#160;are&#160;still&#160;incredibly</p>
+<p style="position:absolute;top:375px;left:477px;white-space:nowrap" class="ft02">attractive&#160;options&#160;-&#160;they&#160;benefit&#160;from&#160;being&#160;extendable&#160;and</p>
+<p style="position:absolute;top:393px;left:477px;white-space:nowrap" class="ft02">capable&#160;of&#160;accomplishing&#160;tasks&#160;in&#160;milliseconds.&#160;Therefore,</p>
+<p style="position:absolute;top:411px;left:477px;white-space:nowrap" class="ft02">instead&#160;of&#160;reinventing&#160;the&#160;wheel,&#160;we&#160;decide&#160;to&#160;propose&#160;a</p>
+<p style="position:absolute;top:429px;left:477px;white-space:nowrap" class="ft02">conservative&#160;addendum&#160;to&#160;the&#160;Language&#160;Server&#160;Protocol.</p>
+<p style="position:absolute;top:447px;left:476px;white-space:nowrap" class="ft02">This&#160;comprises&#160;five&#160;new&#160;methods.</p>
+<p style="position:absolute;top:474px;left:500px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:474px;left:514px;white-space:nowrap" class="ft019">textDocument/expectedType</p>
+<p style="position:absolute;top:492px;left:500px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:492px;left:514px;white-space:nowrap" class="ft019">textDocument/relevantTypes</p>
+<p style="position:absolute;top:510px;left:500px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:510px;left:514px;white-space:nowrap" class="ft019">textDocument/relevantHeaders</p>
+<p style="position:absolute;top:528px;left:500px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:528px;left:514px;white-space:nowrap" class="ft019">textDocument/llmCompletion</p>
+<p style="position:absolute;top:546px;left:500px;white-space:nowrap" class="ft020">•</p>
+<p style="position:absolute;top:546px;left:514px;white-space:nowrap" class="ft019">textDocument/llmCompletionResolveErrors</p>
+<p style="position:absolute;top:569px;left:492px;white-space:nowrap" class="ft019">textDocument/expectedType</p>
+<p style="position:absolute;top:565px;left:663px;white-space:nowrap" class="ft02">returns&#160;the&#160;expected&#160;type&#160;of</p>
+<p style="position:absolute;top:583px;left:477px;white-space:nowrap" class="ft02">an&#160;incomplete&#160;expression.</p>
+<p style="position:absolute;top:605px;left:492px;white-space:nowrap" class="ft019">textDocument/relevantTypes</p>
+<p style="position:absolute;top:601px;left:664px;white-space:nowrap" class="ft02">returns&#160;a&#160;list&#160;of&#160;strings,&#160;each</p>
+<p style="position:absolute;top:619px;left:477px;white-space:nowrap" class="ft02">representing&#160;a&#160;type&#160;definition&#160;that&#160;may&#160;be&#160;relevant&#160;at&#160;a&#160;given</p>
+<p style="position:absolute;top:637px;left:477px;white-space:nowrap" class="ft02">cursor&#160;location.&#160;The&#160;returned&#160;list&#160;contains&#160;components&#160;that</p>
+<p style="position:absolute;top:655px;left:477px;white-space:nowrap" class="ft02">can&#160;be&#160;used&#160;to&#160;build&#160;up&#160;the&#160;expected&#160;type.</p>
+<p style="position:absolute;top:676px;left:492px;white-space:nowrap" class="ft019">textDocument/relevantHeaders</p>
+<p style="position:absolute;top:673px;left:673px;white-space:nowrap" class="ft02">returns&#160;a&#160;list&#160;of&#160;strings,&#160;each</p>
+<p style="position:absolute;top:691px;left:477px;white-space:nowrap" class="ft02">representing&#160;a&#160;function&#160;header&#160;that&#160;we&#160;can&#160;call&#160;to&#160;return&#160;the</p>
+<p style="position:absolute;top:708px;left:477px;white-space:nowrap" class="ft02">expected&#160;type,&#160;or&#160;part&#160;of&#160;it,&#160;at&#160;a&#160;given&#160;cursor&#160;location.</p>
+<p style="position:absolute;top:730px;left:492px;white-space:nowrap" class="ft019">textDocument/llmCompletion</p>
+<p style="position:absolute;top:726px;left:668px;white-space:nowrap" class="ft02">works&#160;similarly&#160;to&#160;the&#160;previ-</p>
+<p style="position:absolute;top:744px;left:477px;white-space:nowrap" class="ft02">ously&#160;existing&#160;completion&#160;method,&#160;but&#160;uses&#160;LLM&#160;to&#160;complete</p>
+<p style="position:absolute;top:762px;left:477px;white-space:nowrap" class="ft02">the&#160;code,&#160;akin&#160;to&#160;GitHub&#160;copilot.&#160;The&#160;result&#160;is&#160;immediately</p>
+<p style="position:absolute;top:780px;left:477px;white-space:nowrap" class="ft02">visible&#160;in&#160;the&#160;editor,&#160;and&#160;users&#160;will&#160;be&#160;able&#160;to&#160;tab&#160;through</p>
+<p style="position:absolute;top:798px;left:477px;white-space:nowrap" class="ft02">different&#160;completions.</p>
+<p style="position:absolute;top:820px;left:492px;white-space:nowrap" class="ft019">textDocument/llmCompletionResolveErrors</p>
+<p style="position:absolute;top:816px;left:748px;white-space:nowrap" class="ft02">will&#160;attempt&#160;to</p>
+<p style="position:absolute;top:834px;left:477px;white-space:nowrap" class="ft02">resolve&#160;incorrect&#160;completions&#160;by&#160;using&#160;error&#160;rounds,&#160;itera-</p>
+<p style="position:absolute;top:852px;left:477px;white-space:nowrap" class="ft02">tively&#160;fixing&#160;the&#160;generated&#160;code&#160;by&#160;replying&#160;with&#160;static&#160;errors</p>
+<p style="position:absolute;top:870px;left:477px;white-space:nowrap" class="ft02">and&#160;prompting&#160;for&#160;a&#160;corrected&#160;version.</p>
+<p style="position:absolute;top:908px;left:477px;white-space:nowrap" class="ft03">4</p>
+<p style="position:absolute;top:908px;left:504px;white-space:nowrap" class="ft03">Future&#160;Work</p>
+<p style="position:absolute;top:929px;left:476px;white-space:nowrap" class="ft02">We&#160;are&#160;in&#160;the&#160;process&#160;of&#160;creating&#160;a&#160;Visual&#160;Studio&#160;Code&#160;ex-</p>
+<p style="position:absolute;top:947px;left:477px;white-space:nowrap" class="ft02">tension&#160;that&#160;uses&#160;this&#160;extended&#160;language&#160;server.&#160;We&#160;hope</p>
+<p style="position:absolute;top:965px;left:477px;white-space:nowrap" class="ft02">to&#160;test&#160;this&#160;with&#160;developers&#160;and&#160;conduct&#160;a&#160;study&#160;on&#160;devel-</p>
+<p style="position:absolute;top:982px;left:477px;white-space:nowrap" class="ft02">oper&#160;productivity&#160;versus&#160;current&#160;implementations&#160;of&#160;LSP</p>
+<p style="position:absolute;top:1000px;left:477px;white-space:nowrap" class="ft02">and&#160;Copilot.</p>
+<p style="position:absolute;top:1038px;left:477px;white-space:nowrap" class="ft03">Acknowledgments</p>
+<p style="position:absolute;top:1059px;left:476px;white-space:nowrap" class="ft02">To&#160;Dr.&#160;Cyrus&#160;Omar&#160;and&#160;Andrew&#160;Blinn&#160;for&#160;the&#160;late&#160;nights.</p>
+</div>
+<!-- Page 3 -->
+<a name="3"></a>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft022{font-size:11px;font-family:AYKBXK+LinLibertineT;color:#155195;}
+-->
+</style>
+<div id="page3-div" style="position:relative;width:918px;height:1188px;">
+<img width="918" height="1188" src="pdftotext003.png" alt="background image"/>
+<p style="position:absolute;top:74px;left:81px;white-space:nowrap" class="ft021">ChatLSP:&#160;Making&#160;Language&#160;Servers&#160;Do&#160;More&#160;for&#160;Statically&#160;Contextualizing&#160;Large&#160;Language&#160;Models</p>
+<p style="position:absolute;top:74px;left:602px;white-space:nowrap" class="ft021">Conference’17,&#160;July&#160;2017,&#160;Washington,&#160;DC,&#160;USA</p>
+<p style="position:absolute;top:110px;left:81px;white-space:nowrap" class="ft03">References</p>
+<p style="position:absolute;top:131px;left:87px;white-space:nowrap" class="ft010">[1]&#160;Andrew&#160;Blinn,&#160;Xiang&#160;Li,&#160;June&#160;Hyung&#160;Kim,&#160;and&#160;Cyrus&#160;Omar.&#160;2024.</p>
+<p style="position:absolute;top:146px;left:107px;white-space:nowrap" class="ft010">Statically&#160;Contextualizing&#160;Large&#160;Language&#160;Models&#160;with&#160;Typed&#160;Holes.</p>
+<p style="position:absolute;top:161px;left:106px;white-space:nowrap" class="ft010">(2024).</p>
+<p style="position:absolute;top:176px;left:87px;white-space:nowrap" class="ft010">[2]&#160;Yiran&#160;Ding,&#160;Li&#160;Lyna&#160;Zhang,&#160;Chengruidong&#160;Zhang,&#160;Yuanyuan&#160;Xu,</p>
+<p style="position:absolute;top:191px;left:107px;white-space:nowrap" class="ft010">Ning&#160;Shang,&#160;Jiahang&#160;Xu,&#160;Fan&#160;Yang,&#160;and&#160;Mao&#160;Yang.&#160;2024.&#160;Lon-</p>
+<p style="position:absolute;top:206px;left:107px;white-space:nowrap" class="ft010">gRoPE:&#160;Extending&#160;LLM&#160;Context&#160;Window&#160;Beyond&#160;2&#160;Million&#160;Tokens.</p>
+<p style="position:absolute;top:221px;left:107px;white-space:nowrap" class="ft010"><a href="https://arxiv.org/abs/2402.13753">arXiv:</a></p>
+<p style="position:absolute;top:221px;left:136px;white-space:nowrap" class="ft022"><a href="https://arxiv.org/abs/2402.13753">2402.13753</a></p>
+<p style="position:absolute;top:221px;left:192px;white-space:nowrap" class="ft010">[cs.CL]</p>
+<p style="position:absolute;top:236px;left:87px;white-space:nowrap" class="ft010">[3]&#160;Nat&#160;Friedman.&#160;2021.&#160;Introducing&#160;GitHub&#160;Copilot:&#160;your&#160;AI&#160;pair&#160;pro-</p>
+<p style="position:absolute;top:251px;left:107px;white-space:nowrap" class="ft010">grammer.</p>
+<p style="position:absolute;top:254px;left:159px;white-space:nowrap" class="ft012"><a href="https://github.blog/2021-06-29-introducing-github-copilot-ai-pair-programmer/">https://github.blog/2021-06-29-introducing-github-copilot-</a></p>
+<p style="position:absolute;top:269px;left:107px;white-space:nowrap" class="ft012"><a href="https://github.blog/2021-06-29-introducing-github-copilot-ai-pair-programmer/">ai-pair-programmer/</a></p>
+<p style="position:absolute;top:280px;left:87px;white-space:nowrap" class="ft010">[4]&#160;Yunfan&#160;Gao,&#160;Yun&#160;Xiong,&#160;Xinyu&#160;Gao,&#160;Kangxiang&#160;Jia,&#160;Jinliu&#160;Pan,&#160;Yuxi</p>
+<p style="position:absolute;top:295px;left:107px;white-space:nowrap" class="ft010">Bi,&#160;Yi&#160;Dai,&#160;Jiawei&#160;Sun,&#160;Qianyu&#160;Guo,&#160;Meng&#160;Wang,&#160;and&#160;Haofen&#160;Wang.</p>
+<p style="position:absolute;top:310px;left:107px;white-space:nowrap" class="ft010">2023.&#160;Retrieval-Augmented&#160;Generation&#160;for&#160;Large&#160;Language&#160;Models:&#160;A</p>
+<p style="position:absolute;top:325px;left:107px;white-space:nowrap" class="ft010">Survey.</p>
+<p style="position:absolute;top:328px;left:147px;white-space:nowrap" class="ft011">CoRR</p>
+<p style="position:absolute;top:325px;left:176px;white-space:nowrap" class="ft010">abs/2312.10997&#160;(2023).</p>
+<p style="position:absolute;top:328px;left:290px;white-space:nowrap" class="ft012"><a href="https://doi.org/10.48550/ARXIV.2312.10997">https://doi.org/10.48550/ARXIV.</a></p>
+<p style="position:absolute;top:343px;left:107px;white-space:nowrap" class="ft012"><a href="https://doi.org/10.48550/ARXIV.2312.10997">2312.10997</a></p>
+<p style="position:absolute;top:340px;left:162px;white-space:nowrap" class="ft010"><a href="https://arxiv.org/abs/2312.10997">arXiv:</a></p>
+<p style="position:absolute;top:340px;left:192px;white-space:nowrap" class="ft022"><a href="https://arxiv.org/abs/2312.10997">2312.10997</a></p>
+<p style="position:absolute;top:355px;left:87px;white-space:nowrap" class="ft010">[5]&#160;GitHub.&#160;[n.&#160;d.].&#160;codeql.</p>
+<p style="position:absolute;top:358px;left:227px;white-space:nowrap" class="ft012"><a href="https://codeql.github.com">https://codeql.github.com</a></p>
+<p style="position:absolute;top:370px;left:87px;white-space:nowrap" class="ft010">[6]&#160;Jordan&#160;Hoffmann,&#160;Sebastian&#160;Borgeaud,&#160;Arthur&#160;Mensch,&#160;Elena</p>
+<p style="position:absolute;top:385px;left:107px;white-space:nowrap" class="ft010">Buchatskaya,&#160;Trevor&#160;Cai,&#160;Eliza&#160;Rutherford,&#160;Diego&#160;de&#160;Las&#160;Casas,</p>
+<p style="position:absolute;top:400px;left:107px;white-space:nowrap" class="ft010">Lisa&#160;Anne&#160;Hendricks,&#160;Johannes&#160;Welbl,&#160;Aidan&#160;Clark,&#160;Tom&#160;Hennigan,</p>
+<p style="position:absolute;top:415px;left:107px;white-space:nowrap" class="ft010">Eric&#160;Noland,&#160;Katie&#160;Millican,&#160;George&#160;van&#160;den&#160;Driessche,&#160;Bogdan&#160;Damoc,</p>
+<p style="position:absolute;top:430px;left:106px;white-space:nowrap" class="ft010">Aurelia&#160;Guy,&#160;Simon&#160;Osindero,&#160;Karen&#160;Simonyan,&#160;Erich&#160;Elsen,&#160;Jack&#160;W.</p>
+<p style="position:absolute;top:445px;left:107px;white-space:nowrap" class="ft010">Rae,&#160;Oriol&#160;Vinyals,&#160;and&#160;Laurent&#160;Sifre.&#160;2022.&#160;Training&#160;Compute-Optimal</p>
+<p style="position:absolute;top:460px;left:107px;white-space:nowrap" class="ft010">Large&#160;Language&#160;Models.&#160;<a href="https://arxiv.org/abs/2203.15556">arXiv:</a></p>
+<p style="position:absolute;top:460px;left:261px;white-space:nowrap" class="ft022"><a href="https://arxiv.org/abs/2203.15556">2203.15556</a></p>
+<p style="position:absolute;top:460px;left:317px;white-space:nowrap" class="ft010">[cs.CL]</p>
+<p style="position:absolute;top:475px;left:87px;white-space:nowrap" class="ft010">[7]&#160;Microsoft.&#160;[n.&#160;d.].</p>
+<p style="position:absolute;top:475px;left:220px;white-space:nowrap" class="ft010">Language&#160;Server&#160;Protocol&#160;Specification&#160;-</p>
+<p style="position:absolute;top:490px;left:107px;white-space:nowrap" class="ft010">3.17.</p>
+<p style="position:absolute;top:493px;left:177px;white-space:nowrap" class="ft012"><a href="https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/">https://microsoft.github.io/language-server-protocol/</a></p>
+<p style="position:absolute;top:508px;left:107px;white-space:nowrap" class="ft012"><a href="https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/">specifications/lsp/3.17/specification/</a></p>
+<p style="position:absolute;top:520px;left:87px;white-space:nowrap" class="ft010">[8]&#160;Microsoft.&#160;[n.&#160;d.].&#160;Official&#160;Page&#160;for&#160;Language&#160;Server&#160;Protocol.</p>
+<p style="position:absolute;top:523px;left:415px;white-space:nowrap" class="ft012"><a href="https://microsoft.github.io/language-server-protocol/">https:</a></p>
+<p style="position:absolute;top:538px;left:106px;white-space:nowrap" class="ft012"><a href="https://microsoft.github.io/language-server-protocol/">//microsoft.github.io/language-server-protocol/</a></p>
+<p style="position:absolute;top:549px;left:87px;white-space:nowrap" class="ft010">[9]&#160;The&#160;Agda&#160;Team.&#160;[n.&#160;d.].&#160;Lexical&#160;Structures.</p>
+<p style="position:absolute;top:553px;left:320px;white-space:nowrap" class="ft012"><a href="https://agda.readthedocs.io/en/v2.6.0.1/language/lexical-structure.html">https://agda.readthedocs.</a></p>
+<p style="position:absolute;top:568px;left:107px;white-space:nowrap" class="ft012"><a href="https://agda.readthedocs.io/en/v2.6.0.1/language/lexical-structure.html">io/en/v2.6.0.1/language/lexical-structure.html</a></p>
+<p style="position:absolute;top:579px;left:81px;white-space:nowrap" class="ft010">[10]&#160;The&#160;GHC&#160;Team.&#160;[n.&#160;d.].</p>
+<p style="position:absolute;top:579px;left:261px;white-space:nowrap" class="ft010">7.14.&#160;Typed&#160;Holes,&#160;The&#160;Glorious</p>
+<p style="position:absolute;top:594px;left:107px;white-space:nowrap" class="ft010">Glasgow&#160;Haskell&#160;Compilation&#160;System&#160;User’s&#160;Guide,&#160;Version</p>
+<p style="position:absolute;top:609px;left:106px;white-space:nowrap" class="ft010">7.10.2.20151030.</p>
+<p style="position:absolute;top:612px;left:190px;white-space:nowrap" class="ft012"><a href="https://downloads.haskell.org/~ghc/7.10.3-rc1/users_guide/typed-holes.html">https://downloads.haskell.org/~ghc/7.10.3-rc1/users_</a></p>
+<p style="position:absolute;top:627px;left:107px;white-space:nowrap" class="ft012"><a href="https://downloads.haskell.org/~ghc/7.10.3-rc1/users_guide/typed-holes.html">guide/typed-holes.html</a></p>
+</div>
+<!-- Page 4 -->
+<a name="4"></a>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</style>
+<div id="page4-div" style="position:relative;width:918px;height:1188px;">
+<img width="918" height="1188" src="pdftotext004.png" alt="background image"/>
+<p style="position:absolute;top:74px;left:81px;white-space:nowrap" class="ft021">Conference’17,&#160;July&#160;2017,&#160;Washington,&#160;DC,&#160;USA</p>
+<p style="position:absolute;top:74px;left:790px;white-space:nowrap" class="ft021">Kim&#160;et&#160;al.</p>
+</div>
+<hr/>
+<a name="outline"></a><h1>Document Outline</h1>
+<ul>
+<li><a href="pdftotext.html#1">Abstract</a></li>
+<li><a href="pdftotext.html#1">1 Introduction and Background</a></li>
+<li><a href="pdftotext.html#2">2 Limitations of Modern Developer Tooling</a>
+<ul>
+<li><a href="pdftotext.html#2">2.1 Limitations of the Language Server Protocol</a></li>
+<li><a href="pdftotext.html#2">2.2 Limitations of Other Static Analysis Tools</a></li>
+</ul>
+</li>
+<li><a href="pdftotext.html#2">3 Extending the Protocol</a></li>
+<li><a href="pdftotext.html#2">4 Future Work</a></li>
+<li><a href="pdftotext.html#2">Acknowledgments</a></li>
+<li><a href="pdftotext.html#3">References</a></li>
+</ul>
+</body>
+</html>
