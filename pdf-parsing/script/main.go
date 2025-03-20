@@ -149,29 +149,40 @@ func (s *scraper) extractParagraph(n *html.Node) {
 
 			sentencesTok := tokenizer.Tokenize(text)
 
-			if len(sentencesTok) == 1 {
-				// if there is only one item here, then either:
-				// this isn't a full sentence yet, or
-				// this is a single sentence followed by a <cite> node (tbh writing).
-				currSentence += sentencesTok[0].Text
-				if currSentence[len(currSentence)-1] == byte('.') {
+			for i, s := range sentencesTok {
+				currSentence += s.Text
+
+				if i == 0 && currSentence[len(currSentence)-1] == byte('.') {
 					newSentence := sentence{text: currSentence, refs: currCitations}
 					sentences = append(sentences, newSentence)
 					currSentence = ""
 					currCitations = []ref{}
 				}
-			} else {
-				for i, s := range sentencesTok {
-					currSentence += s.Text
-
-					if i == 0 {
-						newSentence := sentence{text: currSentence, refs: currCitations}
-						sentences = append(sentences, newSentence)
-						currSentence = ""
-						currCitations = []ref{}
-					}
-				}
 			}
+
+			// if len(sentencesTok) == 1 {
+			// 	// if there is only one item here, then either:
+			// 	// this isn't a full sentence yet, or
+			// 	// this is a single sentence followed by a <cite> node (tbh writing).
+			// 	currSentence += sentencesTok[0].Text
+			// 	if currSentence[len(currSentence)-1] == byte('.') {
+			// 		newSentence := sentence{text: currSentence, refs: currCitations}
+			// 		sentences = append(sentences, newSentence)
+			// 		currSentence = ""
+			// 		currCitations = []ref{}
+			// 	}
+			// } else {
+			// 	for i, s := range sentencesTok {
+			// 		currSentence += s.Text
+			//
+			// 		if i == 0 {
+			// 			newSentence := sentence{text: currSentence, refs: currCitations}
+			// 			sentences = append(sentences, newSentence)
+			// 			currSentence = ""
+			// 			currCitations = []ref{}
+			// 		}
+			// 	}
+			// }
 
 		} else if c.Type == html.ElementNode && c.Data == "cite" {
 
