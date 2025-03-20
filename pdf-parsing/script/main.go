@@ -2,14 +2,12 @@ package main
 
 import (
 	"fmt"
-	"maps"
-	"slices"
 
 	// "io"
 	"net/http"
 	"strings"
 
-	"github.com/neurosnap/sentences"
+	"github.com/neurosnap/sentences/english"
 	"golang.org/x/net/html"
 )
 
@@ -129,20 +127,42 @@ func (s *scraper) extractHeading(n *html.Node) string {
 	return heading
 }
 
-func (s *scraper) extractCite(n *html.Node) string {
-
-}
+// func (s *scraper) extractCite(n *html.Node) string {
+//
+// }
 
 func (s *scraper) extractParagraph(n *html.Node) {
-	paragraph := paragraph{}
+	// paragraph := paragraph{}
 	sentences := []sentence{}
-	citations := []ref{}
-
+	// citations := []ref{}
+	//
 	currSentence := ""
+	currCitations := []ref{}
 
 	for c := n.FirstChild; c != nil; c = c.NextSibling {
 		if c.Type == html.TextNode {
 			text := c.Data
+			tokenizer, err := english.NewSentenceTokenizer(nil)
+			if err != nil {
+				fmt.Println("ERROR:", err)
+			}
+
+			sentencesTok := tokenizer.Tokenize(text)
+
+			if len(sentencesTok) == 1 {
+				currSentence += sentencesTok[0].Text
+			} else {
+				for i, s := range sentencesTok {
+					currSentence += s.Text
+
+					if i == 0 {
+						newSentence := sentence{text: currSentence, refs: currCitations}
+						sentences = append(sentences, newSentence)
+						currSentence = ""
+						currCitations = []ref{}
+					}
+				}
+			}
 
 		} else if c.Type == html.ElementNode && c.Data == "cite" {
 
@@ -150,6 +170,13 @@ func (s *scraper) extractParagraph(n *html.Node) {
 
 		}
 
+	}
+
+	if currSentence != "" {
+		newSentence := sentence{text: currSentence, refs: currCitations}
+		sentences = append(sentences, newSentence)
+		currSentence = ""
+		currCitations = []ref{}
 	}
 }
 
@@ -178,7 +205,7 @@ func (s *scraper) extractSection(n *html.Node) section {
 		if c.Type == html.ElementNode && c.Data == "h2" {
 			heading := s.extractHeading(c)
 			section.name = heading
-			// fmt.Println(heading)
+			fmt.Println(heading)
 		} else if c.Type == html.ElementNode && c.Data == "div" {
 			s.extractDiv(c)
 			// extract paragraph.
