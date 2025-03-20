@@ -150,7 +150,16 @@ func (s *scraper) extractParagraph(n *html.Node) {
 			sentencesTok := tokenizer.Tokenize(text)
 
 			if len(sentencesTok) == 1 {
+				// if there is only one item here, then either:
+				// this isn't a full sentence yet, or
+				// this is a single sentence followed by a <cite> node (tbh writing).
 				currSentence += sentencesTok[0].Text
+				if currSentence[len(currSentence)-1] == byte('.') {
+					newSentence := sentence{text: currSentence, refs: currCitations}
+					sentences = append(sentences, newSentence)
+					currSentence = ""
+					currCitations = []ref{}
+				}
 			} else {
 				for i, s := range sentencesTok {
 					currSentence += s.Text
@@ -178,6 +187,8 @@ func (s *scraper) extractParagraph(n *html.Node) {
 		currSentence = ""
 		currCitations = []ref{}
 	}
+
+	fmt.Println(sentences)
 }
 
 func (s *scraper) extractDiv(n *html.Node) {
