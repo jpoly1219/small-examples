@@ -127,9 +127,25 @@ func (s *scraper) extractHeading(n *html.Node) string {
 	return heading
 }
 
-// func (s *scraper) extractCite(n *html.Node) string {
-//
-// }
+func (s *scraper) extractCite(n *html.Node) (string, []ref) {
+	text := ""
+	refs := []ref{}
+	for c := n.FirstChild; c != nil; c = c.NextSibling {
+		if c.Type == html.TextNode {
+			text += c.Data
+		} else if c.Type == html.ElementNode && c.Data == "span" {
+			body, rs := s.extractSpan(c)
+			text += body
+			refs = append(refs, rs...)
+		} else if c.Type == html.ElementNode && c.Data == "a" {
+			body, rs := s.extractAnchor(c)
+			text += body
+			refs = append(refs, rs...)
+		}
+	}
+
+	return text, refs
+}
 
 func (s *scraper) extractParagraph(n *html.Node) {
 	// paragraph := paragraph{}
@@ -185,7 +201,10 @@ func (s *scraper) extractParagraph(n *html.Node) {
 			// }
 
 		} else if c.Type == html.ElementNode && c.Data == "cite" {
-
+			// cite can have a textnode, span, em, a, ...
+			citeBody, citeRefs := s.extractCite(c)
+			currSentence += citeBody
+			currCitations = append(currCitations, citeRefs...)
 		} else if c.Type == html.ElementNode && c.Data == "em" {
 
 		} else if c.Type == html.ElementNode && c.Data == "a" {
@@ -295,6 +314,7 @@ func (s *scraper) extractSpan(n *html.Node) (string, []ref) {
 	return caption, refs
 }
 
+// TODO: This should just return ref
 func (s *scraper) extractAnchor(n *html.Node) (string, []ref) {
 	caption := ""
 	refs := []ref{}
