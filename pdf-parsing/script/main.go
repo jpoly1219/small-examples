@@ -147,6 +147,11 @@ func (s *scraper) extractCite(n *html.Node) (string, []ref) {
 	return text, refs
 }
 
+// TODO: We're gonna need a way to extract style.
+// Maybe even extract entire HTML elements.
+// We can't do this naively though, because
+// I want to add view by sentences, but
+// p tags don't have a notion of "sentence".
 func (s *scraper) extractParagraph(n *html.Node) {
 	// paragraph := paragraph{}
 	sentences := []sentence{}
@@ -201,12 +206,11 @@ func (s *scraper) extractParagraph(n *html.Node) {
 			// }
 
 		} else if c.Type == html.ElementNode && c.Data == "cite" {
-			// cite can have a textnode, span, em, a, ...
 			citeBody, citeRefs := s.extractCite(c)
 			currSentence += citeBody
 			currCitations = append(currCitations, citeRefs...)
 		} else if c.Type == html.ElementNode && c.Data == "em" {
-
+			currSentence += c.FirstChild.Data
 		} else if c.Type == html.ElementNode && c.Data == "a" {
 			aBody, aRefs := s.extractAnchor(c)
 			currSentence += aBody
