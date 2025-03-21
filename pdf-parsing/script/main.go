@@ -188,6 +188,10 @@ func (s *scraper) extractParagraph(n *html.Node) {
 
 		} else if c.Type == html.ElementNode && c.Data == "em" {
 
+		} else if c.Type == html.ElementNode && c.Data == "a" {
+			aBody, aRefs := s.extractAnchor(c)
+			currSentence += aBody
+			currCitations = append(currCitations, aRefs...)
 		}
 
 	}
