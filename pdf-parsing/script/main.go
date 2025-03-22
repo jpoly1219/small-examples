@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 
 	// "io"
@@ -37,6 +38,7 @@ type sentence struct {
 
 type paragraph struct {
 	sentences []sentence
+	rawHtml   string
 }
 
 type section struct {
@@ -89,6 +91,7 @@ func main() {
 	}
 
 	scraper.traverseNode(doc)
+	fmt.Println(scraper)
 }
 
 func htmlOfArxivUrl(url string) string {
@@ -108,7 +111,8 @@ func (s *scraper) traverseNode(n *html.Node) {
 		// fmt.Println(fig)
 		// fmt.Println("")
 	} else if n.Type == html.ElementNode && n.Data == "section" {
-		s.extractSection(n)
+		section := s.extractSection(n)
+		s.sections = append(s.sections, section)
 	}
 	for c := n.FirstChild; c != nil; c = c.NextSibling {
 		s.traverseNode(c)
@@ -152,11 +156,15 @@ func (s *scraper) extractCite(n *html.Node) (string, []ref) {
 // We can't do this naively though, because
 // I want to add view by sentences, but
 // p tags don't have a notion of "sentence".
-func (s *scraper) extractParagraph(n *html.Node) {
-	// paragraph := paragraph{}
+func (s *scraper) extractParagraph(n *html.Node) paragraph {
+	var b bytes.Buffer
+	err := html.Render(&b, n)
+	if err != nil {
+		fmt.Println("ERROR:", err)
+	}
+
+	paragraph := paragraph{}
 	sentences := []sentence{}
-	// citations := []ref{}
-	//
 	currSentence := ""
 	currCitations := []ref{}
 
@@ -226,7 +234,9 @@ func (s *scraper) extractParagraph(n *html.Node) {
 		currCitations = []ref{}
 	}
 
-	fmt.Println(sentences)
+	paragraph.sentences = sentences
+	paragraph.rawHtml = b.String()
+	return paragraph
 }
 
 func (s *scraper) extractDiv(n *html.Node) {
@@ -237,14 +247,16 @@ func (s *scraper) extractDiv(n *html.Node) {
 					s.abstract = c.FirstChild.Data
 				}
 			}
-		} else if a.Key == "class" && strings.Contains(a.Val, "ltx_para") {
-			for c := n.FirstChild; c != nil; c = c.NextSibling {
-				if c.Type == html.ElementNode && c.Data == "p" {
-					s.extractParagraph(c)
-				}
-			}
-
 		}
+		// else if a.Key == "class" && strings.Contains(a.Val, "ltx_para") {
+		// 	for c := n.FirstChild; c != nil; c = c.NextSibling {
+		// 		if c.Type == html.ElementNode && c.Data == "p" {
+		// 			paragraph := s.extractParagraph(c)
+		// 			// fmt.Println(paragraph)
+		// 		}
+		// 	}
+		//
+		// }
 	}
 }
 
@@ -256,7 +268,17 @@ func (s *scraper) extractSection(n *html.Node) section {
 			section.name = heading
 			fmt.Println(heading)
 		} else if c.Type == html.ElementNode && c.Data == "div" {
-			s.extractDiv(c)
+			// s.extractDiv(c)
+			for _, a := range c.Attr {
+				if a.Key == "class" && strings.Contains(a.Val, "ltx_para") {
+					for c2 := c.FirstChild; c2 != nil; c2 = c2.NextSibling {
+						if c2.Type == html.ElementNode && c2.Data == "p" {
+							paragraph := s.extractParagraph(c2)
+							section.body = append(section.body, paragraph)
+						}
+					}
+				}
+			}
 			// extract paragraph.
 			// each paragraph has text and an optional citation.
 			// it's probably a better idea to split these into sentences and have corresponding citations.
@@ -318,7 +340,6 @@ func (s *scraper) extractSpan(n *html.Node) (string, []ref) {
 	return caption, refs
 }
 
-// TODO: This should just return ref
 func (s *scraper) extractAnchor(n *html.Node) (string, []ref) {
 	caption := ""
 	refs := []ref{}
